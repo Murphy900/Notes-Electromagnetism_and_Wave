@@ -2038,7 +2038,6 @@ Il risultato per cui $U_{piano-q} = U_{qq'}/2$ possiamo interpretarlo con il fat
 
 Se allontaniamo la carica sonda $q$ dal piano, la distribuzione di carica negativa formatasi dall'interazione si sparpaglia nel conduttore per mantenere una configurazione in cui il potenziale sul piano \`e nullo. Il lavoro sulle cariche che si spostano all'interno di un conduttore \`e nullo , perch\`e dato $\phi = k \in \mathbb{R}$, allora $W_{cond} = 0$. Possiamo pensare che le cariche si muovano in direzione ortogonale rispetto al campo elettrostatico.
 
-
 \section{Energia del campo elettrostatico}
 
 Nelle sezioni precedenti abbiamo calcolato l'energia potenziale associata ad una configurazione di cariche. Possiamo vedere una distribuzione di carica continua come un aggregato di tante cariche, che interagiscono tra di loro esercitando una forza di natura Coulombiana e una di coesione, che permette di mantenere la configurazione. Dato che le cariche sono statiche, avremo che 
@@ -2150,6 +2149,99 @@ Utilizzando le coordinate sferiche per l'operatore gradiente determininato il ca
 \caption{Campo elettrico generato da un dipolo}
 \end{figure}
 
+\newpage
+
+\section{Esempi ed esercizi}
+
+\subsection{Carica puntiforme in prossimit\`a di una sfera conduttrice (Esame 23/06/2020)}
+
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/spherecharge} % Replace with your image
+\end{wrapfigure}
+Si consideri un sistema dove si ha una carica puntiforme $q$ ad una distanza $a$ da un conduttore sferico con massa a terra di raggio $r$. Vogliamo calcolare il lavoro necessario ad allontanare la carica da $a$, verso infinito.
+
+\begin{proof}
+	Per risolvere il problema possiamo usare il metodo della carica immagine, ovvero andiamo a collocare una carica immaginaria $Q$ all'interno del conduttore, affinch\`e il potenziale $\phi$ sulla superficie della sfera sia nullo. Di conseguenza abbiamo bisogno di determinare per quali valori $Q$ e in quale posizione $x$ tale condizione \`e verificata.
+\newline
+
+Ipotizziamo si posizionare le due cariche $Q$ e $q$ in due generici punti $(b,0,0)$ dove $b < r$ e $(a,0,0)$ per $a >r$. Il potenziale complessivo del sistema a due cariche \`e dato da 
+\begin{equation*}
+	V(x,y,z) = \frac{1}{4 \pi \varepsilon_0} \left [ \frac{q}{\sqrt{(x-a)^2 + y^2 + z^2}} + \frac{Q}{\sqrt{(x-b)^2+y^2+z^2}} \right]
+\end{equation*}
+Imponendo la condizione $\phi = 0$, abbiamo che 
+\begin{align*}
+	& \frac{q}{\sqrt{(x-a)^2 + y^2 + z^2}} =- \frac{Q}{\sqrt{(x-b)^2+y^2+z^2}} \iff \frac{Q^2}{q^2} = \frac{(x-b)^2 + y^2 + z^2}{(x-a)^2 + y^2 + z^2} \\[0.5cm]
+	& \Rightarrow \frac{Q^2}{q^2} = \frac{x^2 + y^2 +z^2 +2bx + b^2}{x^2 + y^2 +z^2 + 2ax + a^2} = \frac{r^2 - 2bx +b^2}{r^2 - 2ax +a^2} 
+	\Rightarrow \\[0.5cm]
+	& \Rightarrow \frac{Q^2}{q^2}r^2 + \frac{Q^2}{q^2}a^2 - 2\frac{Q^2}{q^2}ax =  r^2 - 2bx +b^2 \Rightarrow 
+\end{align*}
+\begin{align}
+	& \Rightarrow r^2 \left( \frac{Q^2}{q^2}-1 \right) = -\frac{Q^2}{q^2}a^2 +b^2 + 2x \left(\frac{Q^2}{q^2}a - b\right)
+\end{align}
+l'equazione (1.42) assume un espressione semplifica se poniamo l'ultimo addendo nullo, ovvero $b = (Q^2/q^2)a$, e quindi possiamo riscrivere l'equazione nel seguente modo:
+\begin{equation*}
+	r^2 \left( \frac{b}{a} -1\right) = -ab + b^2  = ab\left (\frac{b}{a}-1 \right) \Rightarrow r^2 = ab
+\end{equation*}
+troviamo dunque che la posizione della carica Q affinch\`e $\phi(x,y,z) = 0$ \`e data  da 
+\begin{equation*}
+\boxed{
+	b = \frac{r^2}{a}
+	}
+\end{equation*}
+ci manca ora da determinare la carica immagine $Q$  all'interno del conduttore sferico affinch\`e $\phi(R) = 0$. Per farlo riscriviamo l'espressione del potenziale complessivo con il risultato trovato,
+\begin{equation*}
+	\phi(x,y,z) = \frac{1}{4 \pi \varepsilon_0} \left [ \frac{q}{\sqrt{(x-a)^2+y^2+z^2}} + \frac{Q}{\sqrt{(x-r^2/a)^2 +y^2+z^2}}\right]
+\end{equation*}
+e imponiamo che per $\phi(r,0,0) = 0$  e quindi abbiamo l'equazione 
+\begin{equation*}
+	\phi(r) = \frac{1}{4 \pi \varepsilon_0} \left [ \frac{q}{|r-a|} + \frac{Q}{|r - \frac{r^2}{a}|}\right] = 0
+\end{equation*}
+dato che $a >R$ si ha che $|r-a| = -(r-a)$.L'equazione diventa
+\begin{align*}
+	& Q = \frac{q}{r-a}\left ( r-\frac{r^2}{a}\right)\\[0.5cm] 
+	& \Rightarrow \boxed{Q = -\frac{r}{a}q}
+\end{align*}
+dunque per un potenziale del seguente tipo 
+\begin{equation*}
+	V(x,y,z) = \frac{q}{4 \pi \varepsilon_0} \left [ \frac{1}{\sqrt{(x-a)^2 +y^2 + z^2}} - \frac{r}{a}\frac{1}{\sqrt{(x- r^2/a)^2+y^2 +z^2}}\right]
+\end{equation*}
+abbiamo che \`e soddisfatta la condizione che $\phi(r) = 0$.
+
+Infine possiamo rispondere alla domanda dell'esercizio dove il lavoro per muovere una carica puntiforme da $a$ ad $\infty$ \`e dato da
+\begin{equation*}
+	W = q \phi(a) = \frac{q^2}{4 \pi \varepsilon_0} \frac{r}{a^2-r^2} 
+\end{equation*}
+siccome all'interno della sfera conduttrice non c'\`e campo, per il sistema originale dobbiamo considerare met\`a dell'energia trovata e quindi
+\begin{equation*}
+	W' = \frac{1}{2}W = \frac{q^2}{4 \pi \varepsilon_0} \frac{r}{a^2-r^2}
+\end{equation*}
+
+\end{proof}
+
+Che cosa succede se consideriamo la sfera conduttrice scarica e la rimuoviamo dalla messa a terra ?
+
+ \begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/spherecharge1} % Replace with your image
+\end{wrapfigure}
+
+Avremo che sulla superficie della sfera si crea una distribuzione uniforme di carica $Q'' = -Q$ tale per cui la carica netta su di essa \`e $Q' = Q + Q'' = 0 $ e quindi il conduttore sferico \`e neutro. Questo equivale a porre una seconda carica immagine $Q''$ al centro della sfera. 
+
+Applicando il principio di sovrapposizione per il potenziale di ciascuna carica e considerando l'orgine del sistema di riferimento con il centro della sfera, avremo che 
+\begin{equation*}
+	\phi(x,y,z) = \frac{q}{4 \pi \varepsilon_0} \left [ \frac{1}{\sqrt{(x-r)^2 + y^2 +z^2}} - \frac{R}{r}\frac{1}{\sqrt{(x-R^2/r)^2 + y^2 + z^2}} + \frac{R}{r} \frac{1}{\sqrt{x^2+y^2+z^2}}\right]
+\end{equation*}
+Per determinare il lavoro necessario a spostare la carica da $r$ a $+ \infty$ calcoliamo
+\begin{equation*}
+	W = q\phi(r,0,0) = \frac{q^2R}{4 \pi \varepsilon_0} \left(\frac{1}{r^2-R^2} - \frac{1}{r^2} \right)
+\end{equation*}
+l'energia trovata \`e quella della configurazione delle cariche, per determinare quella associata alla sfera conduttrice neutra, dobbiamo ricordare che internamente il campo \`e nullo e dunque il lavoro necessario \`e la met\`a di W.
+\begin{equation*}
+	W' = W/2 = \frac{q^2R}{8 \pi \varepsilon_0} \left(\frac{1}{r^2-R^2} - \frac{1}{r^2} \right)
+\end{equation*}
+
+\subsection{Esercizio 2}
 
 
 

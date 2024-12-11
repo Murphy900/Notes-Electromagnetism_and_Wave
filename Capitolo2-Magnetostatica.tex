@@ -193,10 +193,13 @@ La relazione (2.5) possiamo interpretarla nel seguente modo:
 \end{center}
 \subsection{Filo infinito percorso da una corrente}
 
-Consideriamo un filo di lunghezza infinita in cui scorre una corrente I. Che orientiamo lunga le direzione $\hat{\bold{z}}$. La simmetria del problema suggerisce di usare delle coordinate cilindriche $(r,\varphi,z)$, dove $r = \sqrt{x^2 + z^2}$ \`e il raggio del filo misurato dal suo centro.
-%METTERE IMMAGINE DEL FILO INFINITO QUI%
-\newline
+Consideriamo un filo di lunghezza infinita in cui scorre una corrente I. Che orientiamo lunga le direzione $\hat{\bold{z}}$. \newpage
 
+La simmetria del problema suggerisce di usare delle coordinate cilindriche $(r,\varphi,z)$, dove $r = \sqrt{x^2 + z^2}$ \`e il raggio del filo misurato dal suo centro.
+\begin{wrapfigure}{r}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/cable}  % Include your image here
+\end{wrapfigure}
 Consideriamo una superficie aperta S giacente nel piano (x,y), con centro coincidente con quello del filo. Affinch\`e  l'integrale di linea definito in (2.4) non sia nullo, \`e necessario che il campo magnetico abbia delle componenti lungo la circonferenza del disco. Per dimostrarlo ci basta considerare la forma locale della legge di Amp\`ere 
 \begin{equation*}
 \nabla \times \bold{B} = \mu_0 \bold{J} 
@@ -243,18 +246,36 @@ per $J = \frac{I}{\pi R^2}$. Possiamo dunque concludere che il campo magnetico d
 Consideriamo un piano giacente nel piano (x,y), ovvero $z = 0$, sul quale \`e presente un densit\`a di corrente che definiamo $\bold{K}$. Dove con $\bold{K}$ si intende una densit\`a di corrente definita rispetto alle unit\`a d'area. Intuitivamente possiamo pensare ad un piano attraversato da corrente come infinite fili allineati in parallelo.
 
 Consideriamo la corrente con direzione lungo $x$: $\bold{K} = K \hat{\bold{x}}$.
-%IMMAGINE PIANO QUI%
-\newline
+\begin{figure}[!ht]
+\vspace{0.1in}
+\includegraphics[width = 7cm]{images/charplane}	
+\centering
+\vspace{0.1in}
+\end{figure}
 
 \noindent Affinch\`e $\bold{J} \neq 0$, abbiamo bisogna che l'integrale di linea del campo sia lungo il bordo di una superficie attraverso cui passa la corrente $\bold{K}$. Se vediamo il piano come un numero infinito di fili in parallelo, per simmetria del problema, il campo magnetico pu\`o esistere solo lungo la direzione $y$. 
 %IMMAGINE QUI%
-Dove $\bold{B}$ ha verso lungo $-\hat{\bold{y}}$ quando $z > 0$ e lungo $\hat{\bold{y}}$ per $z < 0$. Definiamo
+
+Dove $\bold{B}$ ha verso lungo $-\hat{\bold{y}}$ quando $z > 0$ e lungo $\hat{\bold{y}}$ per $z < 0$.
+ \begin{figure}[!ht]
+\vspace{0.1in}
+\includegraphics[width = 7cm]{images/magnfieldplate}
+\centering
+\end{figure}
+
+\noindent Definiamo
 \begin{equation*}
 	\bold{B} = - B(z) \bold{\hat{y}}
 \end{equation*}
-dove $B(z)=-B(-z)$. Utilizzando la legge di Amp\`ere su una superficie aperta come in figura:
+dove $B(z)=-B(-z)$. Utilizzando la legge di Amp\`ere su una superficie aperta come in figura.
 %IMMAGINE QUI%
-con lunghezza L, lungo la direzione $y$ rispetto $\pm z$. Abbiamo che 
+ \begin{figure}[!ht]
+\vspace{0.1in}
+\includegraphics[width = 7cm]{images/planepath}
+\centering
+\end{figure}
+
+\noindent con lunghezza L, lungo la direzione $y$ rispetto $\pm z$. Abbiamo che 
 \begin{equation*}
 	\oint_{C} \bold{B} \cdot \bold{dr} = LB(z) -LB(-z) = 2LB(z) = \mu_0 KL
 \end{equation*}
@@ -315,15 +336,19 @@ Inoltre sotto l'ipotesi di sorgenti finite avremo che $\varphi(r)|_{r \to \infty
 
 \subsection{Solenoide}
 
+\begin{wrapfigure}{r}{0.4\textwidth} % r for right, l for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/solenoidfield}
+\end{wrapfigure}
 Un solenoide \`e una superficie cilindrica costituita da spire attraversate da una corrente ( in generale non \`e necessario per un solenoide che le spire ti attorciglino ottenendo una forma cilindrica, esistono anche solenoidi toroidali). Per semplicit\`a assumiamo che il cilindro sia infinitamente lungo, in modo da trascurare gli effetti al bordo.
 \newline
 
-%IMMAGINE QUI!%
-
 Per un discorso di simmetria della geometria considerata, descriviamo il sistema utilizzando le coordinate cilindriche $(r,\varphi,z)$, con l'asse $\hat{\bold{z}}$ che attraversa il centro del cilindro. Per simmetria, il campo $\bold{B}$ punta lungo l'asse $\hat{\bold{z}}$, per dimostrarlo basta studiare il campo magnetico di una singola spira e applicare il principio di sovrapposizione. L'intensit\`a del campo \`e legata alla distanza radiale $\bold{B} = B(r) \hat{\bold{z}}$. Ogni campo di questo tipo soddisfa la legge di Maxxwell $\nabla \cdot \bold{B} = 0$.
-\newline
 
-%IMMAGINE QUI%
+\begin{wrapfigure}{r}{0.4\textwidth} % r for right, l for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/solenoidpath}
+\end{wrapfigure}
 
 Per determinare il valore del campo magnetico consideriamo la forma differenziale della legge di amp\`ere. Ovunque eccetto la superficie del solenoide abbiamo $\bold{J} =0$ e 
 	\begin{equation*}
@@ -333,15 +358,20 @@ Al di fuori del solenoide per il teorema di unicit\`a sappiamo che deve valere $
 \begin{equation}
 	\oint \bold{B} \cdot \bold{dr} = B_z(0)L
 \end{equation} 
+\begin{wrapfigure}{l}{0.4\textwidth} % r for right, l for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/solenoiddensity}
+\end{wrapfigure}
+
 Per determinare il valore di $B_z(0)$ consideriamo un porzione infinitesima $dz$ del cilindro percorso dalle spire e quindi attraversato da una corrente $dI$. Definiamo la grandezza $n = N/ L$ che definisce il numero di spire per unit\`a di lunghezza. La corrente attraversata dalla porzione dz sar\`a data da 
 \begin{equation*}
 	dI = nidz
 \end{equation*}
+
 Data la forma cilindra, la porzione dz geometricamente coincide con quella di un anello di altezza $dz$, dunque possiamo calcolare il suo campo magnetico per un punto lungo l'asse $\bold{\hat{z}}$ fissato a distanza $\bold{r}$ dal suo bordo.
 \begin{equation*}
 	dB = \frac{\mu_0}{2}\frac{b^2}{r^3}dI = \frac{\mu_0}{2}ni \frac{b^2}{r^2}\frac{dz}{r} = \frac{\mu_0}{2}dz\sin\theta = dB_z
 \end{equation*}
-%IMMAGINE QUI%
 integrando i contributi infinitesimi abbiamo che 
 \begin{equation*}
 	B_z =  \frac{\mu_0}{2}ni \int_{\theta_1}^{\theta_2}\sin \theta d\theta = \frac{\mu_0}{2}ni[\cos\theta_1-\cos\theta_2]
@@ -424,10 +454,7 @@ Dunque se vogliamo avere $\nabla \cdot \bold{A}' = 0 $, basta che prendiamo una 
 	\nabla^2_{\chi} = -\psi(\bold{x})
 \end{equation*}
 ma questa non \`e altro che l'equazione di Poisson. Per quanto discusso nel capitolo di elettrostatica sappiamo sempre che questa equazione ammette sempre soluzione.
-
 \end{proof}
-
-\newpage 
 
 \subsection{Legge di Biot-Savart}
 
@@ -452,7 +479,6 @@ Vogliamo ora verificare che (2.9) sia una soluzione univoca dell'equazione di Am
 	\nabla \cdot \bold{A}(\bold{x}) = \frac{\mu_0}{4\pi} \int_{V} d^3\bold{x}' \; \nabla \cdot \left ( \frac{\bold{J}(\bold{x}')}{|\bold{x}-\bold{x}'|}\right)
 \end{equation*}
 dove gli indici di $\nabla$ coincidono con quelli di $\bold{J}$, ma l'operatore $\nabla$ agisce su $\bold{x}$ non su $\bold{x}'$. Preso atto di questa considerazione, possiamo scrivere l'equazione nel seguente modo
-\newpage 
 \begin{align*}
 	\nabla \cdot \bold{A}(x) & = \frac{\mu_0}{4 \pi} \int_{V} d^3\bold{x}' \; \bold{J}(\bold{x}') \cdot \nabla \left( \frac{1}{|\bold{x} -\bold{x}'|} \right)\\[0.5cm]
 	& = - \frac{\mu_0}{4\pi} \int_V d^3\bold{x}' \; \bold{J}(\bold{x}') \cdot \nabla' \left( \frac{1}{|\bold{x} -\bold{x}'|} \right) 
@@ -466,8 +492,6 @@ Il secondo termine scompare perch\`e per ipotesi stiamo considerando correnti st
 	\nabla \cdot \bold{A} = 0
 \end{equation*}
 e quindi l'univocit\`a della soluzione per l'equazione (2.7).
-\newpage 
-
 
 \subsubsection{Campo magnetico}
 
@@ -492,7 +516,7 @@ tale risultato prende il nome di \textit{legge di Biot-Savart}. Per ottenere l'e
 dove A \`e la sezione del filo e la direzione $d \bold{\hat{l}}$ \`e tangente a C, che coincide con la curva formata dal filo.
 
 \subsubsection{Esempio: Filo infinito rivisitato}
-%IMMAGINE QUI%
+
 Dato un sistema in cui \`e presente un filo infinito attraversato da una corrente, vogliamo verificare che sia verificata la legge di Biot-Savart. Passando in coordinate cilindriche, consideriamo un punto lungo sull'asse $\hat{\bold{z}}$ passante per il centro del filo e definiamo $r^2 = x^2 + y^2$ come coordinata radiale. L'elemento di filo \`e parametrizzato come $d\hat{\bold{x}} = \hat{\bold{z}}dz$ e per un punto $\bold{x}$ distante dal filo, il vettore $d\bold{x}' \times (\bold{x}- \bold{x}')$ \`e tangente alla circonferenza di raggio $r$ attraverso cui passa la corrente con intensit\`a I,
 \begin{equation*}
 	d\bold{x}' \times (\bold{x} -\bold{x}') = r dz \;\hat{u}_{\varphi} 
@@ -509,7 +533,10 @@ Abbiamo visto che le equazioni di Maxwell non permettono l'esistenza di monopoli
 
 \subsection{Corrente in una spira circolare}
 
-%IMMAGINE QUI%
+\begin{wrapfigure}{r}{0.4\textwidth} % r for right, l for left
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/spire1}
+\end{wrapfigure}
 
 Consideriamo una spira circolare C con raggio R attraversata da una corrente con intensit\`a I. Per calcolare il campo magnetico lontano dalla spira, utilizziamo l'espressione originale che abbiamo ottenuto per il potenziale vettore $\bold{A}$.
 \begin{equation*}
@@ -560,9 +587,12 @@ prende il nome di \textit{momento di dipolo magnetico}. Per calcolare il campo m
 che coincide con l'espressione del campo di un dipolo elettrico. In conclusione, per grandi distanza il campo magnetico $\bold{B}$ e $\bold{E}$ risultando essere identici avendo la forma di dipolo.
 
 \subsection{Distribuzione generiche di corrente}
-%IMMAGINE QUI%
-Consideriamo un circuito generico C chiuso e attraversato da una corrente d'intensit\`a I, giacente nel piano (x,y). Immaginiamo di suddividere il generico circuito in spire quadrate chiuse di lato $b$, in questo modo il campo magnetico complessivo pu\`o essere visto come la somma dei contributi dati dal campo delle singole spire. 
 
+Consideriamo un circuito generico C chiuso e attraversato da una corrente d'intensit\`a I, giacente nel piano (x,y). Immaginiamo di suddividere il generico circuito in spire quadrate chiuse di lato $b$, in questo modo il campo magnetico complessivo pu\`o essere visto come la somma dei contributi dati dal campo delle singole spire. 
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left, width for the figure box
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/adjointfield} % Adjust width as necessary
+\end{wrapfigure}
 Le correnti di ogni singola spira si cancellano con quelle adiacenti, in questo modo si ha che il contributo \`e dato solo da quella corrente che percorre il circuito C, lasciando cos\`i inalterato il sistema iniziale. Il potenziale vettore \`e dato da 
 \begin{equation*}
 	\bold{A} = - \frac{\mu_0 }{4 \pi }INb^2\frac{\sin \alpha}{r^2} \hat{u}_x
@@ -572,13 +602,22 @@ dove il termine $a = Nb^2$ \`e l'area complessiva del circuito, data dal contrib
 	\bold{A} = \frac{\mu_0}{4\pi} \frac{\bold{m} \times \hat{u}_r}{r^2}
 \end{equation*}
 Notare che i calcoli svolti sono approssimativi, in quanto se C \`e una curva generica, le spire in prossimit\`a del bordo non avranno dei lati formati da linee rette e dunque non saranno quadrate, e quindi la loro area non \`e $b^2$, ma un qualcosa di pi\`u piccolo. Dunque a seconda di come si sceglie di contare il numero di spire il termine $\bold{m}$ avr\`a un valore diverso, dandone cos\`i una definizione non univoca. Il modo migliore per definire $\bold{m}$ \`e dato dai passaggi usati nel paragrafo precedente. 
+\newline
+Sappiamo che il campo $\bold{B} = \nabla \times \bold{A}$, dove $\bold{A}$ \`e ortogonale al piano $(\hat{u}_{r},\hat{u}_{z})$, dunque $\bold{A} = (0,0,A_{\phi})$, dove $A_{\phi} = \frac{\mu_0}{4 \pi} \frac{m\sin \theta}{r^2}$. Dato che il campo \`e definito come rotore del potenziale vettore questo non pu\`o avere coordinate lungo $\hat{\bold{z}}$ e quindi $\bold{B} = (B_{r},B_{\theta},0)$ e quindi
+\begin{equation*}
+	\bold{B} = \frac{\mu_0}{4 \pi}\frac{m}{r^3}(2\cos\theta \hat{u}_{r} +  \sin \theta \hat{u}_{\theta})
+\end{equation*} 
+Il campo di dipolo magnetico ha la stessa ha la stessa struttura del campo generato da un dipolo elettrico. Notare che per $r>>b$ localmente i campi dono diversi e questo \`e dovuto alla diversa natura delle sorgenti.
+\newpage 
+
 
 \section{Esempi di campi magnetici}
 
 \subsection{Campo magnetico di una spira circolare}
-
-%IMMAGINE QUI%
-
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left, width for the figure box
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/spirenew} % Adjust width as necessary
+\end{wrapfigure}
 Dato l'asse $\hat{\bold{z}}$ passante per il centro della spira circolare di raggio $b$ e giacente nel piano (x,y), determiniamo il campo magnetico in un punto lungo $\hat{\bold{z}}$. Per la simmetria dell'anello rimane solo un contributo assiale del campo magnetico per un tratto infinitesimo della spira e utilizzando la legge di Biot-Savart definiamo 
 \begin{equation*}
 	dB_z = \frac{\mu_0I}{4 \pi} \frac{|d\bold{l} \times \hat{u}_{r}|}{r^2}\cos\theta   = \frac{\mu_0I}{4 \pi} \frac{dl}{r^2}\cos\theta  = \frac{\mu_0I}{4 \pi} \frac{b}{r^3}dl
@@ -588,16 +627,23 @@ Procedendo per integrazione
 	B_z(r) = \frac{\mu_0I}{4 \pi} \frac{b}{r^3} \oint_{C}dl = \frac{\mu_0I}{4 \pi} \frac{b}{r^3} \int_{0}^{2\pi} bd\theta = \frac{\mu_0Ib^2}{2} \frac{1}{r^3}
 \end{equation*}
 
-%manca la parte sulle linee di campo%
+\subsubsection{Linee di campo }
+Consideriamo il campo magnetico $\bold{B}$ in coordinate cilindriche $(r,\theta, z)$ e consideriamo un cammino C, interno alla spira circolare, applicando la legge di Amp\`ere, abbiamo
+\begin{equation*}
+	\oint_{C} \bold{B} \cdot d\bold{l} = B_{\theta} \int_0^{2\pi}r d\theta = 0 \quad \Rightarrow \quad B_{\theta} = 0 
+\end{equation*}
+Se immaginiamo d'invertire il senso di percorrenza della corrente, ovvero ruotando la spira di $180^\circ $, otteniamo la medesima configurazione di partenza, solo che il verso del campo magnetico $B_{r}$ \`e opposto. Per una medesima sorgente, il campo non pu\`o essere diverso e quindi l'unico caso possibile \`e che $B_{r} =0$. Quindi il campo ha direzione solo lungo l'asse $\hat{u}_{z}$
 
 \subsection{Campo magnetico di un solenoide toroidale}
-
-%IMMAGINE QUI%
 
 Dato un solenoide toroidale con angolo minore $a$ e angolo maggiore $b$ attraversato da una corrente I, abbiamo che il campo magnetico ha solo componente angolare 
 \begin{equation*}
 	\bold{B} = B_\theta \hat{u}_{\theta}
 \end{equation*}
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left, width for the figure box
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/torus} % Adjust width as necessary
+\end{wrapfigure}
 questo \`e dovuto al fatto che prese due spire diametralmente opposte, cambia il senso di percorrenza della corrente viaggiando in modo opposto e quindi i campi lungo $u_z$ e $u_r$ sono opposti e di eguale intensit\`a elidendosi in ogni punto per la simmetria dell'oggetto. Per determinare la forma esplicita del campo, definitiamo un circuito di Amp\`ere che racchiuda il toroide, $d\bold{l} = r d\theta \hat{u}_{\theta}$,
 \begin{equation*}
 	\oint_C \bold{B} \cdot d\bold{l} = \int_{0}^{2\pi} B_\theta r d\theta = B_\theta 2\pi = \left \{ \begin{array}{l}
@@ -635,7 +681,6 @@ Per velocit\`a ordinare, quindi non relativistiche la forza magnetica \`e molto 
 
 \subsubsection{Esempio}
 
-%IMMAGINE QUI%
 
 Consideriamo una distribuzione di carica lineica positiva, il campo generato dalla distribuzione delle cariche \`e dato da 
 \begin{equation*}
@@ -662,9 +707,11 @@ dove abbiamo posto $c = 1/\sqrt{\varepsilon_0\mu_0}$. Dunque a velocit\`a ordina
 \subsection{Forza tra due fili}
 
 Abbiamo visto come la forza magnetica porti a deviare le cariche all'interno di un filo e che mantengono la loro direzione di flusso per via della reazione vincolare esercitata dalla struttura. Che cosa succede se facciamo interagire due fili attraversati da corrente ?
-\newline
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left, width for the figure box
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/doublewire} % Adjust width as necessary
+\end{wrapfigure}
 
-%IMMAGINE QUI%
 \noindent Prendiamo due fili in parallelo a distanza $d$ e rispettivamente attraversati da una corrente $I_1$ e $I_2$. La corrente nel primo filo genera un campo magnetico, di conseguenza se le cariche nel secondo filo si muovono con una velocit\`a $\bold{v}$, saranno soggette ad una forza 
 \begin{equation*}
 	\bold{F} = q \bold{v} \times \bold{B} = q \bold{v} \times \left ( \frac{\mu_0I_1}{2 \pi d}\right)\hat{u}_y
@@ -693,10 +740,11 @@ Ipotizziamo che la particella abbia una carica positiva $+q$ e che la direzione 
 \begin{equation}
 	\bold{F}_{B} = q\bold{v} \times \bold{B} = -qvB \;\hat{u}_{r}
 \end{equation}
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left, width for the figure box
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/centripede} % Adjust width as necessary
+\end{wrapfigure}
 troviamo quindi che sulla carica agisce una forza di natura radiale e quindi $\bold{F}_{B}$ \`e una forza di natura centripeta, che porta $q$ a muoversi in senso antiorario lungo un cammino circolare.
-
-%IMMAGINE QUI%
-
 Data l'identi\`a 
 \begin{equation*}
 	qvB = \frac{mv^2}{r}
@@ -709,13 +757,16 @@ Il periodo $T$ con cui la carica compie una rivoluzione completa \`e dato da
 \begin{equation*}
 	T = \frac{2 \pi r}{v} = \frac{2\pi}{v} \frac{mv}{qB} = \frac{2\pi m}{qB}
 \end{equation*}
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left, width for the figure box
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/spiral} % Adjust width as necessary
+\end{wrapfigure}
 Similmente, la velocit\`a angolare (o frequenza ciclotronica) $\omega$ della particela si deriva calcolando
 \begin{equation*}
 	\omega = 2 \pi f = \frac{v}{r} = \frac{qB}{m}
 \end{equation*}
-Se la velocit\`a iniziale della particella carica possiede anche una componente parallela al campo magnetico $\bold{B}$, anzich\`e avere un moto circolare, la traiettoria risultante sar\`a elicoidale 
 
-%IMMAGINE QUI%
+Se la velocit\`a iniziale della particella carica possiede anche una componente parallela al campo magnetico $\bold{B}$, anzich\`e avere un moto circolare, la traiettoria risultante sar\`a elicoidale 
 
 In particolare la posizione della particella sar\`a descritta dalle equazioni
 \begin{equation*}
@@ -728,17 +779,25 @@ In particolare la posizione della particella sar\`a descritta dalle equazioni
 Il passo dell'elica \`e dato da $p = v_{\parallel}T$ dove T coincide con il periodo con cui viene completato un giro nella proiezione sul piano.
 
 \subsection{Moto Cicloidale}
-
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left, width for the figure box
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/cyclovector} % Adjust width as necessary
+\end{wrapfigure}
 Prendiamo un sistema in cui \`e presente sia un campo elettrico $\bold{E}$ che un campo magnetico $\bold{B}$. Se il campo elettrico possiede solo una componente parallela al campo magnetico che ha direzione lungo $\hat{\bold{z}}$, il moto risulta essere circolare uniforme nel piano $(x,y)$, mentre il moto lungo $\hat{\bold{z}}$ diventa 
 \begin{equation*}
 	z(t) = \frac{1}{2}qEt^2 + v_{\parallel}t + z_0
 \end{equation*}
 
 Se il campo $\bold{E} \perp \bold{B}$ abbiamo un moto cicloidale. Consideriamo una carica inizialmente ferma, che subisce un'accelerazione per via della Forza di Coulomb lungo la sua componente $\hat{\bold{z}}$, su di essa agir\`a anche la forza di Lorentz che la porter\`a a deviare lungo $\hat{\bold{x}}$. 
-% IMMAGINE QUI%
+
 
 All'aumentare della velocit\`a la  forza di Lorentz cresce in intensit\`a, fino a quando $\bold{F}_{B} > \bold{F}_{E}$ e la particella decelera fino a quando la forza di Coulomb non diventa pi\`u grande di quella di Lorentz e la particella torna a salire.
-%IMMAGINE QUI%
+ 
+\begin{figure}[!ht]
+\vspace{0.1in}
+\includegraphics[width = 7cm]{images/jump}	
+\centering
+\end{figure}
 
 La direzione dello spostamento della particella \`e data da 
 \begin{equation*}
@@ -835,20 +894,235 @@ Sommando le soluzioni abbiamo l'equazione
 	 (y(t) - R\omega t)^2 + (z(t) - R)^2 = R^2
 \end{equation*}
 che definisce una circonferenza con centro $(R\omega t ,R)$ e raggio R.
-%IMMAGINE QUI%
+
 Stiamo descrivendo un punto su un cerchio che si sposta con velocit\`a $\omega R$. Se cambio sistema di riferimento passando a quello solidale con la circonferenza il campo elettrico risulta essere nullo, e quindi si \`e in un sistema in cui \`e presente solo il campo magnetico.
 
 \subsection{Azioni meccaniche su spira quadrata}
 
-%IMMAGINE QUI%
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left, width for the figure box
+\vspace{-1cm}
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/squarespire} % Adjust width as necessary
+\end{wrapfigure}
+Dato un sistema formato da una spira quadrata di lato $b$ al cui interno scorre una corrente I in senso antiorario. Dato un campo magnetico uniforme
+\begin{equation*}
+	\bold{B} = B_x \hat{u}_{x}
+\end{equation*}
+avremo che sui due lati della spira di esercita una forza 
+\begin{equation*}
+	\bold{F}_{2} = ibB_x \hat{u}_{z} \quad \text{e} \quad \bold{F}_{1} = -ibB_x \hat{u}_{z}
+\end{equation*}
+Dato che per ipotesi il campo magnetico \`e uniforme $\bold{R}_{z} = \bold{F}_{1} + \bold{F}_{2} = 0$. Le forze agenti generano un momento torcente sulla spira dato da 
+\begin{equation*}
+	\bold{M} = \bold{r}_{1} \times \bold{F}_{1} + \bold{r}_{2} \times \bold{F}_{2} = \Delta \bold{r} \times \bold{F} = b\hat{u}_{x} \times ibB_x \hat{u}_{z} = ib^2B_x \hat{u}_{\perp} = \bold{m} \times \bold{B}
+\end{equation*}
+Per un campo magnetico uniforme non si ha una risultante delle forze che contribuisce allo spostamento del sistema, ma solo il momento torcente che porta ad orientare il momento magnetico della spira nella direzione campo.
+
+\subsection{Effetto Hall}
+
+Quando una corrente circola in un conduttore in presenza di un campo magnetico, le cariche libere in moto risentono della forza di Lorentz, sperimentalmente quello che si osserva \`e l'azione della forza sul conduttore nel suo insieme.
+
+\begin{wrapfigure}{l}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/hall1}  % Include your image here
+\end{wrapfigure}
+ In una barra metallica percorsa da una corrente stazionaria, gli elettroni guidati dal campo elettrico $\bold{E}$, si muovo con verso concorde lungo l'asse $\hat{u}_{y}$ con velocit\`a media $\langle \bold{v} \rangle $. Il reticolo cristallino del metallo costituito da ioni costituisce la struttura d'interazione tra le cariche e il metallo.
+  \begin{wrapfigure}{r}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+  \vspace{-1.6cm}
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/hall2}  % Include your image here
+\end{wrapfigure}
+La densit\`a di corrente $\bold{J} = nq \langle v \rangle $ si lega al campo elettrico mediante il coefficiente di conducibilit\`a del metallo 
+ \begin{equation*}
+ 	\bold{J} = \sigma \bold{E}
+ \end{equation*}
+
+ Ipotizziamo ora di applicare al sistema un campo magnetico $\bold{B} = B\hat{u}_{x}$ che risulta essere ortogonale alla velocit\`a media delle cariche; tale interazione prodice una deviazione verso il basso degli elettroni in moto. 
+ \newpage 
+\begin{wrapfigure}{l}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/hall3}  % Include your image here
+\end{wrapfigure}
+  Data la strutta rigida del reticolo cristallino queste tenderanno ad accumularsi sul fondo creando un eccesso di carica negativa, di conseguenza nella parte superiore avremo un eccesso di carica positiva dovuta dagli ioni del reticolo. Questa configurazione delle distribuzioni di carica porta ad avere all'interno del conduttore un campo elettrico trasversale con orientazione vero il basso per gli ioni e verso l'altro per gli elettroni.
+
+La presenza di questo nuovo campo elettrico fa s\`i che gli elettroni si riallineino con direzione concorde e verso opposto al campo iniziale $\bold{E}$. Questo si traduce nel fatto che sugli elettroni si genera una forza di Coulomb eguale e contraria che bilancia quella di Lorentz e quindi la risultante delle forze $\bold{R}_{e} = 0$. 
+
+In compenso si ha la comparsa di una forza elettrostatica agente sugli ioni del reticolo cristallino del metallo, con direzione verso il basso. In sostanza di \`e trasferita la forza di Lorentz alla barra metallica dato che 
+\begin{equation*}
+	\bold{F}_{E_t} = \bold{F}_{L}
+\end{equation*}
+ In caso di vincoli la barra preme contro il supporto generando una forza vincolare, mentre in assenza questa viene spinta verso il basso. L'effetto descritto prende il nome di \textit{effetto Hall}.
+ 
+ Questo effetto rileva delle informazioni sul portatore di carica, infatti se la corrente nel metallo fosse stata dovuta a cariche positive in moto verso destra, si sarebbe manifestato un campo trasversale $\bold{E}_{t}$ con segno opposto. Per misurare sperimentalmente tale risultato \`e sufficiente porre due misuratori di potenziale al capo superiore ed inferiore del filo in modo da misurare il campo $E_t$. A seconda del segno che assume il potenziale, questo ci fornisce informazioni sul segno delle cariche.
+ 
+ Quantitativamente il campo $E_t$ \`e dato dall'uguaglianza 
+ \begin{equation*}
+ 	q E_t = q  \langle v \rangle b \quad \Rightarrow \quad  E_t = \langle v \rangle B
+ \end{equation*}
+ dato che $J = n \langle v \rangle q$ otteniamo che $\langle v \rangle = \frac{J}{nq}$, quindi possiamo riscrivere il campo trasversale come 
+ \begin{equation*}
+ 	E_t = \frac{1}{nq}B \quad \iff \quad |\bold{E}_{t}| = \frac{|\bold{J} \times \bold{B}|}{nq}
+ \end{equation*}
+dove il coefficiente $1/nq$ prende il nome di \textit{coefficiente di Hall} della sostanza.
+
+La misura dell'effetto Hall nei metalli ha stabilito che i portatori sono negativi.
+\subsubsection{Esempio}
+
+Nel calcolo del campo magnetico del filo infinito attraversato dal una corrente stazionaria abbiamo ottenuto che all'interno del filo il campo cresce in modo lineare rispetto alla distanza radiale. Abbiamo potuto assumere che la corrente fosse uniforme nel conduttore perch\`e l'effetto Hall \`e trascurabile.
+
+\section{Energia Magnetica}
+
+\subsection{Pressione Magnetostatica}
+
+\begin{wrapfigure}{l}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+    \centering
+    \includegraphics[width=0.26\textwidth]{images/pressionemagneto}  % Include your image here
+\end{wrapfigure}
+Dato un cilindro conduttore cavo raggio R percorso da una corrente I. Si ha che la densit\`a di carica di superficie \`e data da 
+\begin{equation*}
+	K = \frac{I}{2 \pi R}
+\end{equation*}
+Il campo magnetico generato \`e dato dalla legge di amp\`ere per un circuito C come in figura e quindi
+\begin{equation*}
+	\oint_{C} \bold{B} \cdot d\bold{s} = B_{\theta} 2 \pi r = \mu_o I 
+\end{equation*} 
+per $r > R$. Quindi 
+\begin{equation*}
+	B_{\theta}(r)  = \left \{ \begin{array}{l}
+	\mu_0 K \quad r > R \\[0.2cm]
+	0 \quad r<R
+	\end{array}\right.
+\end{equation*}
+Avremo quindi una discontinuit\`a di campo $\Delta B = \mu_0K$.
+
+Il campo magnetico esercita una forza $\bold{F}_B$ sulla corrente di strato, per determinarne l'espressione per unit\`a di superficie possiamo applicare la formula di Laplace andando a considerare una porzione quadrata della superficie di lato L, e quindi area $L^2$.
 
 
 
+\begin{wrapfigure}{r}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+    \centering
+    \includegraphics[width=0.26\textwidth]{images/pressionemagneto1}  % Include your image here
+\end{wrapfigure}
+La forza di Lorentz dovuta all'interazione della corrente $i$ che scorre nella patch, con il campo magnetico di tutte le sorgenti (interne ed esterne alla pezza) \`e data da 
+\begin{equation*}
+	\bold{F}_{B} = -iL \langle B \rangle \hat{u}_{r}
+\end{equation*} 
+dove il campo magnetico medio \`e dato da 
+\begin{equation*}
+	\langle B \rangle = \frac{B_{ext} + B_{int}}{2}
+\end{equation*}
+Definiamo pressione magnetostatica la grandezza 
+\begin{equation*}
+	P = \frac{F_{B}}{L^2} = - \frac{KL^2}{L^2} \frac{B_{ext}+B_{int}}{2} = - \frac{1}{2 \mu_0} (B_{ext}-B_{int})(B_{ext} + B_{int} ) = -\frac{1}{2 \mu_0}(B_{ext}^2 - B_{int}^2) 
+\end{equation*}
+Nel nostro caso specifico dato che $B_{int} = 0$ abbiamo che la pressione \`e data da $P = - \frac{1}{2 \mu_0}B_{ext}^2$.
+Notare che la pressione magnetica \`e omogenea alla densit\`a di energia.
+
+\subsection{Densit\`a di energia magnetica}
+\begin{wrapfigure}{l}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+    \centering
+    \includegraphics[width=0.26\textwidth]{images/magnenrgy}  % Include your image here
+\end{wrapfigure}
+Supponiamo che la pressione comprima il cilindro di un tratto $dR$ e che la corrente I che attraversa il cilindro sia costante. Nel volume $dV = 2\pi RdRh$ comparir\`a un campo magnetico dove prima non era presente di intensit\`a $B = \mu_0 K$.
+
+La pressione compie un lavoro apparente dato da 
+\begin{equation*}
+	pdV =\frac{1}{2\mu_0}B_{ext}^2 2\pi rdRh
+\end{equation*}
+il termine
+\begin{equation*}
+	\mu_{B} = \frac{1}{2\mu_0}B_{ext}^2
+\end{equation*}
+prende il nome di \textit{densit\`a di energia magnetostatica}. Il lavoro \`e apparente perch\`e non \`e compiuto dalla forza di Lorentz $F_B$ , ma da un agente esterno (come per esempio delle batterie) che sostiene la corrente I contro $\bold{F}_{B}$.
+
+\newpage
+
+\begin{wrapfigure}{l}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+    \centering
+    \includegraphics[width=0.37\textwidth]{images/magnergy1}  % Include your image here
+\end{wrapfigure}
+Consideriamo la velocir\`a degli elettroni all'interno del cilindro durante lo spostamento dR, e sotto l'azione del campo magnetico $\bold{B}$. Le componenti saranno date da:
+\begin{enumerate}
+	\item $\bold{v}_{z}$  rappresenta la velocit\`a di deriva associata alla corrente I;
+	\item $\bold{v}_{R}$ rappresenta la velocit\`a radiale lungo $\mu_{R}$.  
+\end{enumerate}
+
+La forza di Lorentz $\bold{F}_{B}$ avr\`a una componente assiale in verso opposto alla velocit\`a di deriva,
+\begin{equation*}
+	\bold{F}_{B_z} = q \bold{v}_{R} \times \bold{B} = -qv_{R}B \hat{u}_{z}
+\end{equation*}
+ associata allo spostamento $dR$. Per mantenere costante la corrente I si dovr\`a avere una lavoro contro la forza $\bold{F}_{B}$ pari a 
+\begin{equation*}
+	dW = - \bold{F}_{B_z} \cdot d\bold{z} = -\bold{F}_{B} \cdot d\bold{r} \iff (qv_{R}B) (v_zdt) = q v_{z}B(v_R dt)  \iff F_{B_r} dR = PAdR
+\end{equation*}\
+Il lavoro erogato dalla forza esterna risulta essere uguale al lavoro apparente della pressione magnetostatica. A tale lavoro si associata la variazione di energia magnetica associata al campo $\bold{B}$.
+
+\begin{remark}
+Questo risultato \`e al confine della magnetostatica. Nel cambio di configurazione del cilindro, le correnti non sono stazionarie.	
+\end{remark}
 
 
+\section{Principi della magnetostatica}
 
+Fino a questo punto ci siamo concentrati nel dare una definizione matematica delle fenomenologie legate al magnetismo, ma non abbiamo discusso delle unit\`a di misura utilizzate. Il campo magnetico $\bold{B}$ viene misurato in Tesla, come l'omonimo ingegnere elettrico Nicola Tesla. Questo \`e descritto come
+\begin{equation*}
+	[T] = \frac{[N S]}{[CL]}
+\end{equation*}
+Il campo magnetico, ma come anche quello elettrico dipendono dal sistema di riferimento considerato. I due campi sono accoppiati tra loro, infatti la manifestazione di un fenomeno che sia elettrico o magnetico dipende dal sistema di riferimento considerato. Per esempio se ci mettiamo solidali con un sistema in cui scorre della corrente, le cariche risulteranno ferme e di conseguenza si avr\`a solo un campo elettrico, ma non magnetico. Il viceversa avviene se consideriamo il sistema di laboratorio, in cui osserviamo la carica muoversi.
+\newline
 
+Esistono per\`o delle eccezioni, ovvero delle sorgenti di campo $\bold{E}$, date da delle cariche elementari, oppure dipoli magnetici elementari per il campo $\bold{B}$, rispetto 
+	ai quali la loro esistenza \`e indipendente dal sistema di riferimento considerato.
+	
+\section{Esempi ed esercizi}
 
+\subsection{Esempio 1: Lavoro apparente della forza magnetica}
+\begin{wrapfigure}{l}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/batteriaplane}  % Include your image here
+\end{wrapfigure}
+Consideriamo un apparecchio costituito da una spira rettangolare attraversata da una corrente stazionaria $i$ sostenuta da una batteria di massa $m$. Parte della spira viene attraversata da un campo magnetico $\bold{B} = B \hat{u}_{y}$ uniforme e con direzione entrante verso il foglio. La larghezza della spira \`e $a$. Determinare la condizione di equilibrio e il lavoro compiuto per lo spostamento verticale della batteria, supponendo che $i > mg/aB$.
+\newline
+
+\noindent \textit{Soluzione}
+\newline
+	La forza di Lorentz agente sull'estremit\`a superiore del filo \`e data da 
+	\begin{equation*}
+		\bold{F}_{B} = i d\bold{l} \times \bold{B} = ia B \hat{u}_{z}
+	\end{equation*}
+Le cariche sono sottoposte alla forza peso e quindi si ha una condizione di equilibrio quando
+\begin{equation*}
+	F_{B} = F_{mg} \quad \Rightarrow \quad iaB =  mg \quad \Rightarrow \quad i = \frac{mg}{aB}
+\end{equation*}
+Per $i > mg/aB$ lo spostamento verticale $\Delta \bold{s} = \Delta z \hat{u}_{z}$. Il lavoro apparente dovuto alla forza di Lorentz \`e dato da 
+\begin{equation*}
+	W = \bold{F}_{B} \cdot \Delta \bold{s} = iaB \Delta z 
+\end{equation*}
+Durante lo spostamento verticale, il moto delle cariche \`e sovrapposizione di due moti.
+\begin{equation*}
+	\left \{ \begin{array}{l}
+		\Delta x = v_x \Delta t \\ 
+		\Delta z = v_z \Delta t
+	\end{array}\right. \Rightarrow v_{x} \Delta z = v_{z} \Delta x
+\end{equation*}
+\begin{wrapfigure}{r}{0.4\textwidth}  % r for right alignment, 0.4 is the width of the figure
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/batteriaplane1}  % Include your image here
+\end{wrapfigure}
+Lungo la direzione $\hat{u}_{x}$ abbiamo la velocit\`a delle cariche dovuta alla corrente stazionaria. Analogamente la forza di Lorentz non \`e pi\`u ortogonale alle cariche e quindi ha due componenti 
+\begin{equation*}
+	\left \{ \begin{array}{l}
+		F_{x} = - \Delta q v_z B \\ 
+		F_z =  \Delta q v_x B = iaB
+	\end{array}\right. 
+\end{equation*}
+la grandezza $\Delta q $ \`e la carica trasportata per una distanza $a$ nel tempo $\Delta t$.
+
+$\bold{F}_{B}$ ha una componente lungo x, in verso opposto alla corrente, di conseguenza la batteria compie lavoro contro $F_x$ per mantenere la corrente stazionarie e quindi compiendo un lavoro
+\begin{equation*}
+	W_{batt} = -\bold{F}_x \cdot \Delta \bold{x} = \Delta q v_{z}B \Delta x = \Delta q v_{x} B \Delta z = iaB \Delta z
+\end{equation*}
+La batteria compie il lavoro apparente della forza di Lorentz. Per l'appunto \`e apparente in quanto la $\bold{F}_{B}$ \`e ortogonale allo spostamento e quindi non compie lavoro.
 
 
 
