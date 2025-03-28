@@ -23,10 +23,11 @@
 \fancyfoot[C]{\thepage}
 \fancyhead[RO,LE]{\leftmark} 
 \fancyhead[RE,LO]{}
-\usepackage{hyperref}
+\usepackage[bookmarks]{hyperref}
 \usepackage{bm}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{listings}
+
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -92,12 +93,16 @@
 \begin{document}
 \includepdf{copertina_fisica2.pdf}
 	\tableofcontents
-	\input{Chapter0-Introduzione}
+	%\input{Chapter0-Introduzione}%
 	\input{Capitolo1-Elettrostatica}
 	\input{Capitolo2-Magnetostatica}
 	\input{Capitolo3-Circuiti_Elettrici}
 	\input{Capitolo4-Magnetismo_e_relativita}
 	\input{Capitolo5-Elettrodynamics}
-	\input{Capitolo6-Campi_Elettromagnetici_Variabili}
+	%\input{Capitolo6-Campi_Elettromagnetici_Variabili}%
+	\input{Capitolo7-CEM_nei_mezzi_materiali.tex}
+	\input{Capitolo8-Campi_Magnetici_Mezzi_Materiali.tex}
+	\input{Capitolo9-CEM_Variabili_Mezzi.tex}
+	\input{Capitolo10-Ottica_fisica_geometrica_ondulatoria.tex}
 	\input{Appendice_A-Formule_Notevoli}
 \end{document}
