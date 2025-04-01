@@ -12,13 +12,13 @@ Se consideriamo una carica puntiforme in moto nel sistema di riferimento del lab
 	& \bold{B} \quad \text{non soddisfa la legge di Amp\`ere } \iff \nabla \times \bold{B} \neq \mu_0 \bold{J}
 \end{align*}
 Iniziamo l'analisi dei fenomeni non stazionari dalle osservazione sperimentali di Faraday che sistemano la prima relazione $\nabla \times \bold{E} \neq 0$.  Data una carica statica all'interno di un conduttore 
-questa induce una carica indotta nei conduttori, ma che cosa succede se una corrente di carica atteaversa un conduttore ? speriementalmente si osserva una corrente indotta al suo interno per flussi vairabili nel tempo. Ma a questo punto diventa 
-leggittimo domandarsi come mai le cariche all'interno del conduttore si mettano in moto, ovvero quali siano le forze (apparenti) responsabili?
+questa induce una carica indotta nei conduttori, ma che cosa succede se una corrente di carica attraversa un conduttore ? sperimentalmente si osserva una corrente indotta al suo interno per flussi variabili nel tempo. Ma a questo punto diventa 
+legittimo domandarsi come mai le cariche all'interno del conduttore si mettano in moto, ovvero quali siano le forze (apparenti) responsabili?
 
 Inoltre Faraday compie altri esperimenti che restituiscono il medesimo risultato:
 \begin{enumerate}
 	\item conduttore deformato o in movimento immerso in un campo elettromagnetico $\bold{B}$ stazionario;
-	\item le sorgenti del campo magnetico $\bold{B}$ sono in moto rispetto al coduttore;
+	\item le sorgenti del campo magnetico $\bold{B}$ sono in moto rispetto al conduttore;
 	\item conduttore in presenza di campo magnetico variabile della sorgente
 \end{enumerate}
 
@@ -81,17 +81,21 @@ In questa forma l'equazione prende il nome di \textit{legge di Faraday}.
 
 Esiste anche un secondo effetto, dovuto al fatto che dato un campo magnetico variabile e avendo una corrente indotta all'interno del circuito C, avremo che a sua volta la carica in moto genera un suo campo magnetico. Il campo magnetico indotto \`e orientato sempre in opposizione al cambiamento. Questo fenomeno prende il nome di \textit{legge di Lenz} e giustifica il segno negativo nella legge di Faraday (5.2). 
 
-\subsection{Esempio legge di Lenz}
+\subsection{Legge di Lenz}
 
-\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left
-    \centering
-    \includegraphics[width=0.38\textwidth]{images/lenz_law}
-\end{wrapfigure}
-Possiamo dimostrare la legge di Lenz con un semplice esempio. Consideriamo un caso in cui il cammino C \`e una circonferenza giacente in un piano, e ipotizziamo che sia immersa in campo magnetico B uniforme che al passare del tempo questo diventa pi\`u piccolo e dunque $\dot{\Phi} < 0$. Per la legge di Faraday abbiamo che $\mathcal{E} > 0 $ e la corrente scorre in senso antiorario lungo C. La corrente indotta genere una campo $\bold{B}$ che incrementa il campo all'interno della spira opponendosi alla sua decrescita.
-
+ Il segno meno che compare nell'espressione (5.3) \`e molto importante in quanto mette in evidenza il fatto che l'effetto della $fem$ indotta \`e sempre tale da opporsi alla causa che ha generato il fenomeno.
+\begin{center}
+	\includegraphics[width = 15cm]{images/lenz_law1}
+\end{center}
+Possiamo riassumere i casi possibili nelle quattro configurazioni in figura:
+\begin{enumerate}
+	\item a)il flusso del campo magnetico $d\phi/dt >0 $, di conseguenza $\mathcal{E} <0$ e viene generata una corrente in senso $antiorario$ che produce un campo magnetico $\bold{B} _{ind}$ indotto. In questo modo si ottiene un autoflusso che si oppone all'aumento di $\phi(\bold{B}_{ind})$, cos\`i che il flusso complessivo attraverso il circuito cresce  pi\`u lentamente.
+	\item b) il flusso del campo magnetico \`e ($d\phi/ dt < 0 $) la fem indotta \`e $\mathcal{E} > 0$. La corrente nel circuito scorre in senso $orario$, si genera un campo magnetico indotto concorde con il campo esterno. L'autoflusso si oppone alla diminuzione e in questo modo il flusso complessivo decresce pi\`u lentamente.
+	\item c) e d) sono l'equivalente di a) e b), ma con direzione del campo esterno opposta. 
+\end{enumerate}
 \subsection{Esempio: Batteria (Corrente Stazionaria)}
 
-Quando osserviamo della corrente all'interrno di un circuito ci sono solo  due forze responsabili del trasporto delle cariche: la sorgente, $\bold{F_s}$, che solitamente  \`e confinata in una porzione del circuito (come una batterria) e una forza di natura elettrostatica, che serve a trasportare l'effetto della sorgente sul  resto del circuito:
+Quando osserviamo della corrente all'interno di un circuito ci sono solo  due forze responsabili del trasporto delle cariche: la sorgente, $\bold{F_s}$, che solitamente  \`e confinata in una porzione del circuito (come una batteria) e una forza di natura elettrostatica, che serve a trasportare l'effetto della sorgente sul  resto del circuito:
 \begin{equation}
 	\bold{F} = \bold{F_s}  + \bold{E}
 \end{equation}
@@ -100,15 +104,15 @@ Nel caso di una batteria $\bold{F_s}$ \`e data dal potenziale chimico al suo int
 	\mathcal{E} \equiv \int_{C} \bold{F} \cdot \bold{ds} = \int_C  \bold{F_s}  \cdot \bold{ds}
 \end{equation*}
 
-e quindi come definito il precedente all'interno del circuito  abbiamo una forza elettromotrice responsabile de flusso delle cariche al suo iterno.  
+e quindi come definito il precedente all'interno del circuito  abbiamo una forza elettromotrice responsabile de flusso delle cariche al suo interno.  
 
 Se consideriamo un modello semplificato della batteria, in cui ne trascuriamo la resistenza,  abbiamo che la forza sulle cariche \`e  $E = -\bold{F_s} $, dunque la \textit{fem} possiamo vederla legata alla tensione ai campi della batteria.
 \begin{equation*}
 	\mathcal{E} = \int_{C} \bold{F_s} \cdot \bold{ds} = - \int_{a}^b \bold{E} \cdot \bold{dl} = V
 \end{equation*}
 
-Lo scopo di una batteria \`e  quelllo di manterna un differza di potenziale all'internro di un circuito pari alla forza elettromotrice. Notare che all'interno di una batteria $\bold{F_s}$ la corrente ha flusso in direzione opposta al campo elettrico $\bold{E}$.
- \newpage
+Lo scopo di una batteria \`e  quello di mantenere un differenza di potenziale all'interno di un circuito pari alla forza elettromotrice. Notare che all'interno di una batteria $\bold{F_s}$ la corrente ha flusso in direzione opposta al campo elettrico $\bold{E}$.
+
 
 \subsection{Generatori Elettrici}
 
@@ -188,9 +192,11 @@ sostituendo per i tempi otteniamo la relazione $v_D \Delta y = a v$ e quindi pos
 \end{equation*}
 In questo modo si dimostra che la forza responsabile della corrente nel circuito \`e la forza esterna che alimenta la forza elettromotrice.
 
-\newpage
-
 \subsection{Caso Generale }
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/flux_theorem.png} % Replace with your image
+\end{wrapfigure}
 
 Esiste un modo semplice per dimostrare la relazione tra forza elettromotrice e variazione di flusso di un campo magnetico che cambia nel tempo. Ipotizziamo di avere un generico circuito $C(t)$ che pu\`o essere mosso rigidamente e attraversato da un campo magnetico $\bold{B}$. Al tempo $t + \delta t$ il circuito \`e stato traslato in una nuova posizione, questo porta ad avere un cambio del flusso del campo $\bold{B}$ di conseguenza possiamo scrivere 
 \begin{equation*}
@@ -216,7 +222,6 @@ Un elemento di superficie di $S_C$ \`e dato da
 	d\bold{S} = (d\bold{r} \times \bold{v}) \delta t
 \end{equation*} 
 dove d$\bold{r}$ \`e un tratto del circuito $C(t)$ e $\bold{v}dt$ il tratto di cui si \`e stato traslato in un tempo $\delta t$.
-\newpage
 
 Di conseguenza l'equazione (5.5) pu\`o essere riscritta nel seguente modo
 \begin{equation}
@@ -237,9 +242,15 @@ Il termine di destra include la forza tangenziale al filo data sia dal campo ele
 e quindi ritroviamo la legge del flusso definita ad inizio capitolo $\mathcal{E} = - d\phi /dt$.
 
 La forza elettromotrice \`e omogenea alla differenza di potenziale, in elettrodinamica (o nei circuiti con correnti non stazionarie) questa viene definita differenza di tensione $\Delta V$ in quanto il campo elettrico $\bold{E}$ non \`e conservativo e non ammette potenziale. Come conseguenza la tensione elettrica dipende dal percorso.
+\newpage
 
 \subsection{Esempio: Generatore di Corrente Alternata }
-%IMMAGINE QUI PAGINA 10%
+
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.30\textwidth]{images/alt_gen.png} % Replace with your image
+\end{wrapfigure}
+
 Dato un circuito chiuso C chiuso in cui \`e presente una resistenza R, questo viene messo in rotazione rispetto all'asse orizzontale passante per esso con velocit\`a angolare costante $\omega$, inoltre inizialmente il cammino forma un angolo $\theta_0$ rispetto al versore $\hat{\mu}_z$. All'interno del sistema \`e presente un campo magnetico $\bold{B} = B \hat{\mu}_z$ stazionario in cui la spira \`e immersa. Determinare la corrente che scorre all'interno del circuito.
 
 \begin{proof}
@@ -258,8 +269,10 @@ Dato che la forza elettromotrice coincide con la differenza di tensione alle est
 
 \subsection{Esempio: Dinamo di Faraday}
 
-%IMMAGINE QUI PAGINA 10%
-
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.30\textwidth]{images/faraday_dinamo.png} % Replace with your image
+\end{wrapfigure}
 Un disco di metallo di raggio R ruota con velocit\`a angolare $\omega$ rispetto all'asse verticale passante per il centro. Il mezzo conduttore si trova immerso in un campo magnetico $\bold{B}$ con direzione e orientamento parallelo all'asse di rotazione del disco. Si costruisce un circuito collegando ad un capo dell'asse una resistenza e al disco un contatto che ne permetta la rotazione. Determinare la corrente nel conduttore.
 
 \begin{proof}
@@ -294,8 +307,9 @@ quindi in virt\`u di quanto osservato sperimentalmente deve esistere un campo el
 
 Per semplicit\`a  consideriamo solo lo spostamento di un segmento del circuito (sbarra conduttrice).
 
-%IMMAGINE QUI PAGINA 12%
-
+\begin{center}
+	\includegraphics[width = 15cm]{images/rel_bar.png}
+\end{center}
 Nel riferimento $O'$ solidale con la sbarra in moto relativo a O, con velocit\`a $v_{OO'} = v$, per determinare il campo elettrico $\bold{E'}$ utilizziamo le seguente leggi di trasformazione di campo
 \begin{align}
 \left \{ \begin{array}{l}
@@ -326,12 +340,17 @@ Nel sistema di riferimento O si giunge a un risultato analogo dove affinch\`e le
 	\bold{f} = \bold{E} + \bold{v} \times \bold{B} = 0 \Rightarrow \bold{E} = -\bold{v} \times \bold{B}
 \end{equation*}
 internamente al conduttore.
-%IMMAGINE QUI PAGINA 12%
+\begin{center}
+	\includegraphics[width = 15cm]{images/riferiment.png}
+\end{center}
 I due osservatori interpretano diversamente i fenomeni e vedono campi $\bold{E}$ e $\bold{B}$ differenti, ma osservano il medesimo risultato sperimentale, questo \`e dovuto al fatto che la distribuzione di carica \`e la medesima.
 
 \subsubsection{Calcolo della Forza Elettromotrice nel sistema O'}
 
-%IMMAGINE QUI PAGINA 13%
+\begin{wrapfigure}{r}{0.4\textwidth}  % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/move_charge} % Replace with your image file
+\end{wrapfigure}
 
 Ora che abbiamo determinato l'espressione del campo elettrico nel sistema di riferimento $O'$ possiamo procedere a calcolarne esplicitamente la forza elettromotrice indotta sulla spira quadrata considerata inizialmente.
 
@@ -359,7 +378,7 @@ La relazione del flusso del campo magnetico con la forza elettromotrice \`e  inv
  Nell'esempio considerato il campo $\bold{B}$ \`e stazionario e in moto relativo, ma \`e variabile nel riferimento del laboratorio (solidale con la spira), eccetto nel caso in cui $\bold{B}$ \`e uniforme 
 \end{remark}
 
-\subsection{Campo Magnetico Variabile (Terzo Esperimento di Faraday}
+\subsection{Campo Magnetico Variabile (Terzo Esperimento di Faraday)}
 
 Abbiamo visto come per un circuito in moto rispetto alle sorgenti e viceversa la forza elettromotrice ha origini differenti rispetto all'osservatore, ma la legge di Faraday rimane comunque un invariante relativistico in forma. Nel paragrafo precedente per l'osservatore del laboratorio solidale con la spira per giustificare la fisica del fenomeno abbiamo introdotto un campo elettrico indotto, la giustificazione della sua introduzione \`e chiara solo in relativit\`a speciale.
 
@@ -390,9 +409,12 @@ dove
 \end{align} 
 Lo specificare la stazionariet\`a nelle coordinate significa che la Legge di Faraday descrive a rigore soli il secondo e terzo esperimento di Faraday. Nel caso di un circuito variabile immerso in un campo $\bold{B}$ stazionario la fem \`e dovuta a $\bold{f_B}$, e non vale l'espressione della forza elettromotrice in (5.10). In questo caso si ricorre alla regola universale del flusso in (5.7).
 
-\subsection{Esempio: Variazione del Campo Mangetico}
+\subsection{Esempio: Variazione del Campo Mangnetico}
 
-%IMMAGINE QUI PAGINA 17%
+\begin{wrapfigure}{l}{0.4\textwidth}  % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.32\textwidth]{images/solenoid_spire} % Replace with your image file
+\end{wrapfigure}
 
 Consideriamo un sistema costituito da una solenoide di raggio b, densit\`a di spire $n$ e attraversato da una corrente $I(t) = I_0 \cos(\omega t)$ intorno al quale \`e posta una spira di raggio $a$ e resistenza $R$. Determinare la forza elettromotrice indotta nel circuito.
 
@@ -489,8 +511,11 @@ Se i campi presentano delle simmetrie risulta comodo utilizzare la forma integra
 \end{equation*}
 per un campo $\bold{E}$ costante sulla linea C ad un tempo fissato.
 \subsection{Esempio 1 }
+\begin{wrapfigure}{l}{0.4\textwidth}  % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.32\textwidth]{images/change_field} % Replace with your image file
+\end{wrapfigure}
 
-%IMMAGINE QUI PAGINA 20%
 Consideriamo un campo magnetico $\bold{B}(t) = B_0(t) \hat{\bold{u}}_z$ variabile nel tempo, uniforme nello spazio e a simmetria cilindrica. Questo induce un campo elettrico $\bold{E}= E(r) \hat{\bold{u}}_{\theta}$ nel piano,  ortogonale a $\bold{\hat{u}}_z$, e uniforme lungo il circuito. Dalla forma integrale della legge di Faraday
 \begin{equation*}
 	\mathcal{E} = \oint_{C} \bold{E} \cdot d \bold{l} = E_{\theta}(r,t) 2 \pi r = - \frac{\partial B}{\partial t} \pi r^2 
@@ -510,8 +535,11 @@ crescente linearmente con r.
 \end{remark}
 
 \subsection{Esempio 2}
-%IMMAGINE QUI PAGINA 21%
 
+\begin{wrapfigure}{r}{0.4\textwidth}  % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.32\textwidth]{images/solenoid1} % Replace with your image file
+\end{wrapfigure}
 Consideriamo il campo magnetico prodotto da un solenoide di raggio b attraversato da della corrente d'intensit\`a $I(t)$, variabile nel tempo,  questo \`e dato da 
 \begin{equation*}
 	\bold{B}(t) = \left \{\begin{array}{l}
@@ -519,12 +547,17 @@ Consideriamo il campo magnetico prodotto da un solenoide di raggio b attraversat
 		0 \quad \quad \quad \quad r > b
 	\end{array}\right.
 \end{equation*}
-Il problema \`e a simmetria cilindrica di conseguenza il campo elettrico  indotto ed esterno al solenoide \`e della forma $\bold{E} = E(r,t) \hat{\bold{u}}_{\theta}$. Utilizzando la legge di Faraday integrale 
-%IMMAGINE 2 QUI PAGINE 21% 
+
+
+Il problema \`e a simmetria cilindrica di conseguenza il campo elettrico  indotto ed esterno al solenoide \`e della forma $\bold{E} = E(r,t) \hat{\bold{u}}_{\theta}$. Utilizzando la legge di Faraday integrale
+
 \begin{equation*}
 	E(r) 2 \pi r = - \frac{d}{dt} \int_{S} \bold{B} \cdot d\bold{A} = - \mu_0 n \frac{\partial I}{\partial t} \pi b^2 \Rightarrow E(r,t) = - \frac{\mu_0 n }{2} \frac{\partial I}{\partial t} \frac{b^2}{r}
 \end{equation*}
-
+\begin{wrapfigure}{l}{0.4\textwidth}  % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/electric_field} % Replace with your image file
+\end{wrapfigure}
 \begin{remark}
 	Il campo $\bold{E}$ indotto esiste solo quando $\bold{B}$ \`e variabile, ossia quando le correnti non sono stazionarie. Eppure abbiamo comunque calcolato $\bold{B}(t)$ della spira usando le nozioni matematiche della magnetostatica. 
 	
@@ -533,8 +566,10 @@ Il problema \`e a simmetria cilindrica di conseguenza il campo elettrico  indott
 
 \subsection{Esempio 3}
 
-%IMMAGINE QUI PAGINA 22%
-
+\begin{wrapfigure}{l}{0.4\textwidth}  % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/filo_infinto} % Replace with your image file
+\end{wrapfigure}
 Consideriamo un filo infinito attraversato da una corrente variabile $I(t)$, il campo magnetico generato \`e
 \begin{equation*}
 	\bold{B}(t) = \frac{\mu_0}{2 \pi r} I(t) \bold{\hat{u}}_{\theta}
@@ -606,7 +641,10 @@ La legge di Faraday non presenta queste difficolt\`a, poich\`e $\nabla \cdot \bo
 \end{remark}
 Nonostante non vi fosse nessuna evidenza sperimentale nell'ottocento che campi elettici $\bold{E}$ variabili inducessero campi magnetici, Maxwell not\'o l'asimettria tra le legge di Faraday e quella di Amp\'ere e si pose il problema concettuale di una generalizzazione delle equazioni del campo elettromagnetico.
 \subsection{Corrente di Spostamento}
-%IMMAGINE QUI PAGINA 27%
+\vspace{0.2cm}
+\begin{center}
+	\includegraphics[width = 11.5cm]{images/transport_current}
+\end{center}
 
 Un esperimento per dimostrare la necessit\`a di una correzione della legge di Amper\'ere \`e quello della scarica e carica di un condensatore. L'idea \`e quella di di avere una configurazione in cui la corrente all'interno d i un circuito cambia nel tempo. Per farlo consideriamo un circuito RC formato da una resistenza R, un condensatore C e un interruttore. Quando chiudiamo il circuito la carica immagazzinata nel condensatore fluisce  nel circuito scaldando la resistenza.
 \newline
@@ -615,8 +653,12 @@ Qual \`e il problema? Proviamo a calcolare il campo magnetico creato dalla corre
 \begin{equation*}
 	\int_{\Gamma} \bold{B} \cdot d \bold{r} = \mu_0 I
 \end{equation*}
+\begin{wrapfigure}{l}{0.4\textwidth}  % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/moving_path}
+\end{wrapfigure}
 In questo caso la corrente I(t) cambia nel tempo.
-%IMMAGINE QUI PAGINA 81 TONG%
+
 Supponiamo di considerare una superficie $S'$ che ha sempre come contorno $\Gamma$ e si estende nella regione in cui \`e presente il condensatore. Attraverso $S'$ non passa corrente, di conseguenza se utilizziamo la legge di Amp\'ere, possiamo concludere che non ci sia campo magnetico
 \begin{equation*}
 	\int_{C} \bold{B} \cdot d\bold{r} = 0 
@@ -654,8 +696,11 @@ La corrente di spostamento
 ha le dimensioni di una densit\`a di corrente. Il suo nome non indica una corrente che esiste fisicamente, ovvero nell'esempio del condensatore non si ha un reale transito di cariche tra le armature.
 
 \subsection{Esempio: Corrente Radiale}
-%IMMAGINE QUI PAGINA 30 NOTE TABA%
 
+\begin{wrapfigure}{r}{0.4\textwidth}  % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/spheric_surface}
+\end{wrapfigure}
 Consideriamo un conduttore sferico con una cavit\`a al suo centro in cui \`e posta una carica Q. Nella corona sferica scorre una densit\`a di corrente $\bold{J} = \sigma \bold{E}$. Verificare la legge di Amp\'ere-Maxwell.
 
 \begin{proof}
@@ -691,8 +736,11 @@ Utilizzando la corrente di spostamento l'equazione di Amp\`ere-Maxwell abbiamo c
 \end{proof}
 
 \subsection{Scarica del Condensatore }
-%IMMAGINI DA PAGINA 32 a 33 NOTE TABARELLI SETTIMANA 9%
 
+\begin{wrapfigure}{l}{0.4\textwidth}  % 'r' for right, 'l' for left, width of figure
+    \centering
+    \includegraphics[width=0.24\textwidth]{images/parallel_plate} % Adjust width accordingly
+\end{wrapfigure}
 Ritornando all'esempio usato per introdurre l'equazione di Amp\'ere-Maxwell, abbiamo visto che senza considerare la corrente di spostamento il campo magnetico $\bold{B} = 0$ quando la superficie $S'$ attraversa il volume tra i due piatti del condensatore. La necessit\`a della corrente di spostamento ci dice che manca qualcosa alla descrizione del problema perch\`e l'accumulo di carica nei piatti del condensatore induce una dipendenza dal tempo del campo elettrico presente tra i piatti.
 
 Nelle condizioni in cui le cariche sono statiche il campo elettrico assume l'espressione
@@ -700,7 +748,11 @@ Nelle condizioni in cui le cariche sono statiche il campo elettrico assume l'esp
 	\bold{E} = \frac{Q}{\varepsilon_0 A}\bold{\hat{u}}_n
 \end{equation*}
 dove A \`e l'area della superficie di ciascun piatto e Q la carica depositata su di essi. Si ignorando gli effetti di bordo, il che \`e accettabile se la distanza tra le armature \`e molto pi\`u piccola della loro dimensione.
- 
+
+ \begin{wrapfigure}{r}{0.4\textwidth}  % 'r' for right, 'l' for left, width of figure
+    \centering
+    \includegraphics[width=0.24\textwidth]{images/parallel_plate1} % Adjust width accordingly
+\end{wrapfigure}
  La corrente di spostamento indotta dal campo elettrico variabile 
  \begin{equation*}
  	\bold{J}_d = \frac{1}{A} \frac{dQ}{dt}
@@ -718,6 +770,7 @@ dove A \`e l'area della superficie di ciascun piatto e Q la carica depositata su
  	B(r) 2\pi r  = \mu_0 \varepsilon_0 \left(\frac{1}{\varepsilon_0 A}\frac{dQ}{dt}\right)\pi r^2  \Rightarrow B(r) = \frac{\mu_0 I}{2 \pi b^2}r
  \end{equation*}
 Il campo magnetico ha una discontinuit\`a passando attraverso le armature per $r<b$, questo \`e dovuto al fatto che la corrent $I(t)$ e i piatti si stanno scaricando. Nei piatti fluisce una corrente superficiale 
+
 \begin{equation*}
 	\Delta B_{\parallel} = \mu_0 K \Rightarrow K = \frac{1}{\mu_0}(B_{ext} - B_{in}) = \frac{I}{2\pi r}\left(1 - \frac{r^2}{b^2}\right)
 \end{equation*}
@@ -725,6 +778,11 @@ In modo esplicito la corrente superficiale attraverso una circonferenza di raggi
 \begin{equation*}
 	K = \frac{I}{2 \pi r} = \frac{1}{2\pi r}\frac{dQ_r}{dt}
 \end{equation*}
+ \begin{wrapfigure}{l}{0.4\textwidth}
+ \vspace{-1.5cm}  % 'r' for right, 'l' for left, width of figure
+    \centering
+    \includegraphics[width=0.23\textwidth]{images/parallel_plate2} % Adjust width accordingly
+\end{wrapfigure}
 dove $Q_r = Q_0\left(1-\frac{r^2}{b^2}\right)$ \`e la frazione di carica nella corona esterna di raggio r, per una distribuzione di carica uniforme. Svolgendo i conti ritroviamo quanto dedotto in precedenza dalla discontinuit\`a del campo magnetico.
 
 \subsection{Limite Quasi-Statico}
@@ -733,8 +791,12 @@ La correzione dell'equazione di Amp\'ere da parte di Maxwell risulta trascurabil
 
 \subsubsection{Esempio: Condensatore con Corrente Variabile}
 %IMMAGINI PAGINA 35-36 NOTE TABARELLI SETTIMANA 9%
+\begin{wrapfigure}{r}{0.4\textwidth}
+ % 'r' for right, 'l' for left, width of figure
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/parallel_plate3} % Adjust width accordingly
+\end{wrapfigure}
 Consideriamo un condensatore posto in un circuito in cui scorre una corre $I(t)$, il campo elettrico presente tra le due armature \`e dato da 
-
 \begin{equation*}
 	\bold{E} = \frac{Q(t)}{\varepsilon_0 \pi b^2}\hat{\bold{u}}_z
 \end{equation*}
@@ -746,11 +808,18 @@ Siccome il campo magnetico risultate \`e variabile per la legge di Faraday, esis
 \begin{equation*}
 	\nabla \times \bold{E}_{ind} = - \frac{\partial \bold{B}}{\partial t}
 \end{equation*}
+
+
 Per valutare la variazione del campo elettrico $\Delta E/E$ rispetto al campo elettrico del condensatore  e dato che il campo magnetico ha direzione azimutale, consideriamo un circuito C con lato maggiore $b$ raggio delle armature e lato minore dato dalla distanza $d$ tra i due piatti. Da cui calcoliamo circuitazione del campo elettrico indotto
 \begin{equation*}
 	\oint_{C} \bold{E}_{ind} \cdot d\bold{l} = [E(b) - E(0)]d = \Delta E_{ind}d
 \end{equation*}
-analogamente deriviamo il flusso del campo magnetico attraverso la superficie racchiusa da C 
+\begin{wrapfigure}{l}{0.4\textwidth}
+ % 'r' for right, 'l' for left, width of figure
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/parallel_plate4} % Adjust width accordingly
+\end{wrapfigure}
+analogamente deriviamo il flusso del campo magnetico attraverso la superficie racchiusa da C: 
 \begin{equation*}
 	\phi(\bold{B}) = \int_{0}^{d}dx \int_{0}^{b} \frac{\mu_0 I}{2 \pi b^2}r dr = \frac{\mu_0 d }{4 \pi }I
 \end{equation*}
@@ -778,6 +847,10 @@ Affinch\`e $\Delta E/E \approx1$ deve valere che $\left(\frac{b}{c \tau}\right)^
 
 \subsubsection{Esempio: Solenoide }
 %IMMAGINI PAGINA 37 NOTE TABARELLI SETTIMANA 9 %
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.18\textwidth]{images/solenoid2} % Replace with your image
+\end{wrapfigure}
 Consideriamo un sistema in cui \`e presente un solenoide con una densit\`a di spire $n$ attraversato da una corrente alternata $I(t) = I_0 \cos(\omega t)$. Il campo magnetico dipendente dal tempo generato \`e dato da $\bold{B}(t) = \mu_0 n I(t) \hat{\bold{u}}_z$. Determinare:
 \begin{enumerate}
 	\item  $E(t)$ in funzione di r;
@@ -785,19 +858,30 @@ Consideriamo un sistema in cui \`e presente un solenoide con una densit\`a di sp
 	\item Mostrare che $\Delta B /B \ll 1$ per fenomeni quasi statici.
 \end{enumerate}
 
-\begin{proof}
+
+
 1)  Campo elettrico e magnetico variabile sono legati tra loro dalla legge di Faraday
 \begin{equation*}
 	\nabla \times \bold{E} = - \frac{\partial \bold{B}}{\partial t}
 \end{equation*}
+\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/circular_path} % Replace with your image
+\end{wrapfigure}
 siccome il campo magnetico ha direzione assiale, il campo elettrico indotto deve avere direzione azimutale, ed \`e costante per $r$ fissato. Per la simmetria del problema prendiamo un cammino circolare di raggio $r$ che circonda il solenoide. Passando alla forma integrale della legge di Faraday
 \begin{equation*}
 	\oint_{C} \bold{E} \cdot d \bold{l} = - \frac{\partial}{\partial t} \int_{S} \bold{B} \cdot d\bold{A}
 \end{equation*} 
 Siccome $B(t)$ \`e uniforme abbiamo che 
+
 \begin{equation*}
 	E(r)2 \pi r = - \frac{d}{dt}(B \pi r^2) \Rightarrow E(r) = -\frac{1}{2}\mu_0 n r \frac{dI}{dt}
 \end{equation*}
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/circular_path1} % Replace with your image
+\end{wrapfigure}
+
 2) Prendendo un cammino rettangolare  C interno al solenoide con altezza $h$ e ampiezza $r$, utilizzando la legge di Maxwell, calcoliamo
 \begin{equation*}
 	\oint_{C} \bold{B} \cdot d \bold{l} = [B(r) - B(0)]h = \Delta B h
@@ -830,7 +914,7 @@ Se consideriamo numericamente $c = 3 \times 10^8$ e $r = 3 - 30\;cm$, abbiamo ch
 
 Tutti i risultati "statici" restano validi fino a frequenze relativamente elevate.
  
- \end{proof}
+
 
 \section{Induzione Elettromagnetica }
 
