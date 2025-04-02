@@ -850,7 +850,7 @@ posta la velocit\`a della luce come $c = 1/\sqrt{\varepsilon_0 \mu_0}$  possiamo
 Affinch\`e $\Delta E/E \approx1$ deve valere che $\left(\frac{b}{c \tau}\right)^2 \sim 1$. Tale condizione nel limite quasi stazionario \`e soddisfatta.
 
 \subsubsection{Esempio: Solenoide }
-%IMMAGINI PAGINA 37 NOTE TABARELLI SETTIMANA 9 %
+
 \begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
     \centering
     \includegraphics[width=0.18\textwidth]{images/solenoid2} % Replace with your image
@@ -956,8 +956,11 @@ La sua unit\`a di misura nel sistema internazionale \`e \textit{l'henry}
 \end{equation*}
 
 \subsubsection{Esempio: Anelli Concatenati e Complanari}
-%IMMAGINE PAGINA 4 SETTIMANA 10 TAABARELLI%
 
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.34\textwidth]{images/mutual_inductance} % Replace with your image
+\end{wrapfigure}
 Consideriamo due anelli innestati l'uno dentro l'altro in modo che siano complanari dove il primo ha un raggio $R_2 \ll R_1$ del secondo. Il campo $\bold{B}_1$ relativo al circuito pi\`u grande e dovuto ad una corrente $I_1$, \`e uniforme sulla superficie di racchiusa dall'anello $C_2$.
 
 Al centro della spira circolare il campo magnetico vale 
@@ -979,7 +982,7 @@ e quindi la forza elettromotrice indotta \`e parti a
 Dalla regola di Lenz  sappiamo che se la corrente $I_2$ indotta in $C_2$ genera un campo $\bold{B}_2$, il flusso di quest'ultimo deve contrastare la variazione di flusso di $\bold{B}_1$ e quindi $\Delta \bold{B}_{2}$ \`e opposto in verso a $\Delta \bold{B}_1$. Se $I_1$ aumenta in senso orario allora $I_2$ aumenta in senso antiorario.
 
 \subsubsection{Bobine}
-%IMMAGINE %
+
 Aumentando gli avvolgimenti, si pu\`o aumentare la mutua induttanza. Se consideriamo $N_1$ avvolgimenti sottili su $C_1$ allora $\bold{B}_{1}^{tot} = \sum_{i=1}^{N_1}\bold{B}_i = N_1 \bold{B}_{1}$. Mentre per $N_2$ avvolgimenti su $C_2$ si ha $\phi_{21}^{tot}(\bold{B}_1^{tot}) = N_2 \phi_{21}(\bold{B}_1^{tot})$ e quindi 
 \begin{equation*}
 	\phi_{21} = \left( \frac{\mu_0 I}{2R_1}N_1 \right)\left(N_2 \pi R_2^2\right)
@@ -999,7 +1002,7 @@ In situazioni in cui la geometria del problema non \`e ben definita (o in tutti 
 
 \subsubsection{Teorema di Reciprocit\`a della Mutua Induttanza}
 
-%IMMAGINE PAGINA 6 SETTIMANA 10%
+
 
 Per ogni coppia di circuiti $C_1$ e $C_2$ fissati relativamente tra loro e in cui \`e possibile far scorrere una corrente, i rispettive coefficienti di mutua induttanza sono
 \begin{equation*}
@@ -1017,14 +1020,16 @@ Utilizziamo il potenziale vettore $\bold{A}$ per il calcolo del flusso di $\bold
 	\int_{S}\bold{B} \cdot d\bold{a} = \int_{S}(\nabla \times \bold{A}) \cdot d\bold{a} = \oint_{C} \bold{A} \cdot d\bold{l}
 \end{equation*}	
 In questo modo possiamo calcolare il flusso tramite l'integrale di linea di $\bold{A}$.
-
+\begin{center}
+	\includegraphics[width = 13cm]{images/inductance_path}
+\end{center}
 Il potenziale $\bold{A}_{21}$, dovuto alla corrente $I_1$ nel circuito $C_1$, sull'elemento d$\bold{l}_2$ \`e dato da:
 \begin{equation*}
 	\bold{A}_{21}= \frac{\mu_0 }{4 \pi}	I_1 \oint_{C_1}\frac{d \bold{l}_1}{r_{21}}
 \end{equation*} 
 Il flusso di $\bold{B}_1$ concatenato al circuito $C_1$ \`e:
 \begin{align*}
-	\phi_{21} & = \oint_{C_2} \bold{A}_{21} \cdot d\bold{l}_2 = \frac{\mu_0}{4 \pi}I_1 \oint_{C_2}\left[\oint_{C_1} \frac{1}{r_{21}}d\bold{l}_1 \right] \cdot d\bold{l}_2 = \\ \rule{0pt}{15pt}
+	\phi_{21} & = \oint_{C_2} \bold{A}_{21} \cdot d\bold{l}_2 = \frac{\mu_0}{4 \pi}I_1 \oint_{C_2}\left[\oint_{C_1} \frac{1}{r_{21}}d\bold{l}_1 \right] \cdot d\bold{l}_2 = \\ \rule{0pt}{35pt}
 	& = \frac{\mu_0}{4 \pi}I_1 \oint_{C_2} \oint_{C_1} \frac{d \bold{l}_1 \cdot d\bold{l}_2}{r_{21}}
 \end{align*}
 In modo analogo scambiando i ruoli di $C_1$ e $C_2$ definiamo
@@ -1046,8 +1051,11 @@ Possiamo concludere che
 
 \subsubsection{Esempio: Bobine Concentriche e Complanari}
 
-%IMMAGINE PAGINA 7 SETTIMANA 10%
 
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.34\textwidth]{images/bobine} % Replace with your image
+\end{wrapfigure}
 Consideriamo una bobina $C_1$ di raggio $R_1$ con $N_1$ avvolgimenti e resistenza R, al suo inerno \`e presente una seconda bobina con $N_2$ avvolgimenti e raggio $R_2 \ll R_1$. Quest'ultima \`e collegata a una batteria che fa scorrere una corrente $I_2$ al suo interno.
 \newline
 
@@ -1056,10 +1064,13 @@ La corrente indotta in $C_1$ \`e data da
 	I_1 = \frac{\mathcal{E}_{12}}{R} = - \frac{1}{R} \frac{d\phi_{12}}{dt} = -\frac{1}{R}M_{12} \frac{dI_2}{dt}
 \end{equation*}
 Il coefficiente di mutua induttanza $M_{12}$ non \`e calcolabile in modo immediato perch\`e $\bold{B}_2$ dovuto alla corrente $I_2$, non \`e uniforme sulla superficie $S_1$ delimitata da $C_1$. Per\`o abbiamo visto nell'esempio precedente che \`e possibile calcolare $M_{21}$ e usando il teorema di reciproca induttanza otteniamo $M_{12}$.
-
+\newpage
 \subsection{Autoinduttanza}
 
-%IMMAGINE PAGINA 8 SETTIMANA 10%
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.34\textwidth]{images/autoinductance} % Replace with your image
+\end{wrapfigure}
 
 Una corrente I fluisce all'interno di un circuito C, se questa \`e variabile di conseguenza anche il campo $\bold{B}$ cambia e quindi anche il suo flusso attraverso la superficie S racchiusa da C:
 \begin{equation*}
@@ -1082,12 +1093,15 @@ che si oppone alla variazione di flusso in , ossia oppone resistenza all'instaur
 	La forza elettromotrice e il campo $\bold{B}$ sono legati da una relazione locale $\nabla \times \bold{E} = - \partial \bold{B}/\partial t$, che non dipende dalla natura delle sorgenti.
 \end{remark}
 
-\subsubsection{Esempio: Induttanza per una Bobina Circolare}
+\subsubsection{Esempio: Induttanza per una Bobina Toroidale}
 %IMMAGINI PAGINA 9 SETTIMANA 10%
-
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \vspace{-0.7cm}
+    \centering
+    \includegraphics[width=0.35\textwidth]{images/toroid} % Replace with your image
+\end{wrapfigure}
 Data una bobina toroidale di altezza $h$ con raggio interno $a$, raggio esterno $b$ dotata di N avvolgimenti, calcolare la sua autoinduttanza.
 
-\begin{proof}
 	Dalla legge di Amp\'ere in coordinate cilindriche, calcoliamo il campo magnetico:
 	\begin{align*}
 		\bold{B}(r) = \left \{ \begin{array}{l}
@@ -1095,6 +1109,12 @@ Data una bobina toroidale di altezza $h$ con raggio interno $a$, raggio esterno 
 			0 \quad \text{altrove}
 		\end{array}\right.
 	\end{align*}
+	\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left
+	\vspace{-1.2cm}
+    \centering
+    \includegraphics[width=0.34\textwidth]{images/integration_path} % Replace with your image
+\end{wrapfigure}
+
 Il flusso concatenato da una spira \`e dato da 
 \begin{equation*}
 	\phi_{A}(\bold{B}) = \frac{\mu_0I}{2 \pi}h \int_{a}^{b} \frac{1}{r}dr = \frac{\mu_0  I}{2 \pi}h \log\left(\frac{b}{a}\right)
@@ -1104,14 +1124,16 @@ e quindi il flusso totale concatenato dal solenoide \`e dato da
 	\phi_{tot}(\bold{B}) = N \phi_{A}(\bold{B})
 \end{equation*}
 
-\end{proof} 
 
 In generale se la geometria del problema non \`e nota, L \`e misurabile.
 
 \section{Induttanza come Elemento Circuitale (Circuito RL)}
 
 %IMMAGINE QUI PAGINA 10 SETTIMANA 10%
-
+	\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.34\textwidth]{images/RL_circuit} % Replace with your image
+\end{wrapfigure}
 Dato un circuito formato da una batteria (forza elettromotrice), una resistenza R, un induttanza L e un interruttore che permette di chiudere il circuito. Sperimentalmente possiamo riprodurre il circuito pensandolo come ad una batteria collegata da una bobina formata da un filo conduttore con resistenza R.
 \newline
 
@@ -1133,7 +1155,7 @@ la sua soluzione \`e
 \end{equation} 
 imponendo la condizione iniziale $I(0)=0$ si ha che la costante $A = - \mathcal{E}_0/R$ e quindi (5.22) diventa 
 \begin{equation}
-	I(t) = \frac{\mathcal{E}_0}{R}\left(1-e^{\frac{R}{L}t}\right)
+	I(t) = \frac{\mathcal{E}_0}{R}\left(1-e^{-\frac{R}{L}t}\right)
 \end{equation}
 definiamo $\tau = \frac{L}{R}$, che determina la velocit\`a di transizione in cui la corrente si stabilizza intorno al valore stazionario $\mathcal{E}_0/R$ e la tensione sull'induttore diventa zero. Il tempo di transizione \`e dovuto al fatto che la carica non \`e istantanea, la bobina  si oppone all'instaurarsi della corrente e $\mathcal{E}_L$ si oppone alla variazione di flusso (legge di Lenz).
 
@@ -1142,11 +1164,14 @@ Il tempo di stabilizzazione (transiente) dipende da L, maggiore \'e il suo valor
 \subsection{Scarica di un Induttore}
 
 %IMMAGINE PAGINA 12 SETTIMANA 10 %
-
+	\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.34\textwidth]{images/inductance_discharge} % Replace with your image
+\end{wrapfigure}
 Si ha un circuito RL la cui condizione iniziale sulla corrente \`e data da $I(t) = \mathcal{E}_0/R$, al tempo $t = 0$ l'interruttore posto all'interno del circuito esclude la batteria e chiude l'induttanza L su R con un filo (corto-circuito).
 
 \begin{remark}
-Aprire un induttore senza cortocircuitare i capi non \`e prudente (se L \`e grande). L'induttore si oppone cambi di flusso di $\bold{B}$ e vuole mantenere la corrente, di conseguenza si ha una scarica elettrica. 	
+Aprire un induttore senza cortocircuitare i capi non \`e prudente (se L \`e grande). L'induttore si oppone ai cambi di flusso di $\bold{B}$ e vuole mantenere la corrente, di conseguenza si ha una scarica elettrica. 	
 \end{remark}
 
 L'equazione per la corrente al tempo $t \geq 0$ \`e:
@@ -1178,13 +1203,17 @@ La forza elettromotrice \`e una grandezza additiva per il principio di sovrappos
 	\mathcal{E}_i &= - \frac{d\phi}{dt} = - \frac{d}{dt} \int_{S} \bold{B} \cdot d\bold{a} = - \frac{d}{dt} \int_{S_i} (\bold{B}_{1} + \bold{B}_{2} + ...+ \bold{B}_{N}) \cdot d \bold{a} = \notag \\ \rule{0pt}{20pt} 
 	& = - \frac{d}{dt}(\phi_1 + ....+ \phi_N) = -L_{i} \frac{dI_i}{dt} - \sum_{i \neq j}M_{ij}\frac{dI_j}{dt}
 \end{align}
+\newpage 
 dunque la tensione ai capi dell'induttore i-esimo \`e 
 \begin{equation}
 	V_i = L_i \frac{d I_i}{dt} + \sum_{i \neq j} M_{ij}\frac{dI_j}{dt}
 \end{equation}
 
 \subsubsection{Induttori in Serie}
-
+	\begin{wrapfigure}{r}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.25\textwidth]{images/inductance_series} % Replace with your image
+\end{wrapfigure}
 %IMMAGINE PAGINA 13 SETTIMANA 10%
 
 Preso un circuito ideale ( in cui R = 0) formate da due induttanze in successione e attraversato da una corrente I generata da una batteria $\mathcal{E}$. La tensione sui singoli induttori \`e differente, di conseguenza la tensione totale \`e data da 
@@ -1199,7 +1228,10 @@ Se $M_{ij} \ll L_i$ possiamo considerare solo $L = \sum_{i} L_i$.
 
 \subsubsection{Induttori in Parallelo}
 %IMMAGINE QUI%
-
+	\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/inductance_parallel} % Replace with your image
+\end{wrapfigure}
 Consideriamo un circuito ideale (R = 0) in cui sono presenti due induttori in parallelo, attraversati da una corrente I data da un generatore $\mathcal{E}$.  La tensione sulle singole induttanze \`e la medesima 
 \begin{align*}
 	\mathcal{E} = L_1 \frac{d I_1}{dt} + M \frac{dI_2}{dt} \\ \rule{0pt}{30pt} 
@@ -1236,11 +1268,17 @@ dunque in generale
 \begin{equation}
 	L = \sum_i \frac{1}{L_i}
 \end{equation}
-
+\newpage 
 \subsection{Trasformatore}
 
 %IMMAGINE QUI PAGINA 14 SETTIMANA 10%
-Un trasformatore \`e costituito da due bobine solenoidali lineari, con stessa sezione S e lunghezza $l$, date da $N_1$ e $N_2$ avvolgimenti nel circuito primario e secondario. Ipotizzando che il campo magnetico nei solenoidi sia uniforme e che il campo disperso (ossia il campo all'esterno del solenoide) sia nullo. 
+	\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+	\vspace{-0.5cm}
+    \centering
+    \includegraphics[width=0.34\textwidth]{images/transformator} % Replace with your image
+\end{wrapfigure}
+Un trasformatore \`e costituito da due bobine solenoidali lineari, con stessa sezione S e lunghezza $l$, date da $N_1$ e $N_2$ avvolgimenti nel circuito primario e secondario. 
+Ipotizzando che il campo magnetico nei solenoidi sia uniforme e che il campo disperso (ossia il campo all'esterno del solenoide) sia nullo. 
 \newline
 
 Per un trasformatore ideale il flusso passa attraverso tutti gli avvolgimenti delle bobine, facendo passare della corrente alternata nel primo circuito otteniamo una forza elettromotrice $\mathcal{E}_1 = \mathcal{E}_1(t)$, mentre nel secondo compare una forza elettromotrice indotta $\mathcal{E} = \mathcal{E}_2(t)$.
@@ -1340,8 +1378,11 @@ dove l'ultimo termine \`e dovuto alle propriet\`a dell'operatore gradiente. Assu
 
 \subsection{Esempio: Energia Immagazzinata in un Solenoide Toroidale}
 
-%IMMAGINE PAGINA 18 SETTIMAN 10%
-
+%IMMAGINE PAGINA 18 SETTIMANA 10%
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.34\textwidth]{images/toroid1} % Replace with your image
+\end{wrapfigure}
 Il campo magnetico prodotto dal toroide con raggio minore $a$, raggio maggiore $b$ e altezza $h$ attraversato da una corrente I \`e dato da 
 \begin{equation*}
 	\bold{B} = \left \{ \begin{array}{l}
@@ -1389,7 +1430,10 @@ In questa formulazione l'energia immagazzinata rende agevole il calcolo del flus
 \subsubsection{Esempio : Sistema a Due Induttori}
 
 %IMMAGINE PAGINA 20 SETTIMANA 10%
-
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.37\textwidth]{images/mutual_inductance1} % Replace with your image
+\end{wrapfigure}
 Dato un sistema formato da due circuiti $C_1$ e $C_2$ con resistenza trascurabile e induttanze $L_1$ e $L_2$, calcolare il lavoro necessario per portate  la corrente in $C_1$ da $I= 0$ a $I = I_1$ e in modo analogo per $C_2$.
 
 \begin{proof}
@@ -1426,7 +1470,10 @@ che coincide con il risultato generale ottenuto in (5.33).
 \subsection{Esempio: Piani Superconduttori}
 
 %IMMAGINE PAGINA 21 SETTIMANA 10%
-
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.38\textwidth]{images/superconducting_plane} % Replace with your image
+\end{wrapfigure}
 Dato un sistema di due piani in paralleli superconduttori (R =0) di lato maggiore l e minore b, la cui distanza di separazione \`e $x \ll b,l$. I piani sono attraversati da una corrente di strato $K = I/b$, e attraversa entrambi i piani mediante un filo conduttore lungo x. Trovare la variazione di energia del sistema e la forza esercitata sui piatti per variare la distanza di $dx > 0$.
 
 \begin{proof}
@@ -1493,8 +1540,11 @@ e in modo pi\`u completo tenendo conto dei termini di autoinduzione
 
 \subsection{Circuito RLC in Serie}
 % IMMAGINE PAGINA 24 SETTIMANA 10%
-
-Consideriamo un circuito formato da una condensatore C o da una induttanza L. Se il condensatore risulta essere carico e viene collegato a resistore si ha una corrente dall'armatura positiva a quella negativa che scarica il condensatore. Data $V_C$ la tensione ai capi del condensatore, avente valore massimo $V_0$ nell'istante iniziale, quando viene chiuso il circuito; in ogni istante successivo la tensione ai capi del condensatore \`e uguale a quella ai capi del resistore e valgono le equazioni 
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.32\textwidth]{images/RLC} % Replace with your image
+\end{wrapfigure}
+Consideriamo un circuito formato da una condensatore C o da una induttanza L. Se il condensatore risulta essere carico e viene collegato al resistore si ha una corrente dall'armatura positiva a quella negativa che scarica il condensatore. Data $V_C$ la tensione ai capi del condensatore, avente valore massimo $V_0$ nell'istante iniziale, quando viene chiuso il circuito; in ogni istante successivo la tensione ai capi del condensatore \`e uguale a quella ai capi del resistore e valgono le equazioni 
 \begin{equation*}
 	V_C = \frac{q}{C} = RI \quad \text{e} \quad I = - \frac{dq}{dt}
 \end{equation*}  
@@ -1574,7 +1624,7 @@ Nel primo caso la soluzione manifesta un comportamento solo se le due soluzioni 
 
 \subsubsection{1) Oscillatore Sottosmorzato}
 
-Nel caso sottosmorzato le soluzioni dell'equazione carateristica sono numeri complessi
+Nel caso sottosmorzato le soluzioni dell'equazione caratteristica sono numeri complessi
 \begin{equation*}
 	\alpha_{1,2} = - \gamma \pm i \sqrt{\omega_0^2 - \gamma^2} \equiv - \gamma \pm i \omega_{s}
 \end{equation*}
@@ -1680,11 +1730,13 @@ Poich\`e l'energia diminuisce di un fattore $e^{-2 \gamma t}$:
 	t_Q = \frac{1}{2 \gamma} \quad \Rightarrow \quad Q = \frac{\omega_s}{2 \gamma} = \frac{\omega_s L}{R}
 \end{equation*}
 Il fattore di qualit\`a Q \`e grande quando la resistenza R \`e piccola, si ha il caso dell'oscillatore ideale quando $R \to 0 $ e $Q \to \infty$. Quando R \`e grande, Q \`e piccolo e si ha un cattivo oscillatore, poich\`e R \`e legato a gamma e dunque se $\gamma > \omega_0$ si ha smorzamento senza oscillazione.
-
+\newpage
 \subsection{Circuito RLC Forzato}
-
 %IMMAGINE PAGINA 31 SETTIMANA 10%
-
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.32\textwidth]{images/RLC_alternate} % Replace with your image
+\end{wrapfigure}
 Per mantenere un'oscillazione elettrica permanente in un circuito RLC occorre fornire con continuit\`a la potenza che viene dissipata nel resistore. Allo scopo si connette al circuito un generatore di forza elettromotrice variabile. L'equazione del circuito analogamnte a quanto fatto per RLC non alimentato \`e data da
 \begin{equation*}
 	\frac{q}{c} + L \frac{dI}{dt} + RI =  \mathcal{E}(t)
@@ -1700,7 +1752,9 @@ Usiamo come ansatz per la soluzione particolare il termine $I(t) = I_0 \cos(\ome
 	& - \omega^2 I_0 \cos(\omega t) - \frac{R}{L} \omega I_0 \sin(\omega t)+ \frac{I_0}{LC} \cos(\omega t) = - \frac{\omega \mathcal{E}_0}{L}(\sin(\omega t)\cos(\varphi) + \cos(\omega t)\sin(\varphi)) \\ \rule{0pt}{30pt}
 	& \Rightarrow -\frac{R}{L}\omega I_0 \sin(\omega t) + I_0 \left(\frac{1}{LC} - \omega^2\right)\cos(\omega t) = - \frac{\omega \mathcal{E}_0}{L}\cos(\varphi)\sin(\omega t) - \frac{\omega \mathcal{E}_0}{L}\sin(\varphi)\cos(\omega t)
 \end{align*}
+
 L'eguaglianza deve essere valida in qualsiasi istante e quindi devono essere uguali i coefficienti di $\sin(\omega t)$ a primo e a secondo membro; lo stesso deve valere per i coefficiente di $\cos(\omega t)$ e imponendo queste due identit\`a si ottiene:
+\newpage
 \begin{align}
 	& \tan \varphi = \frac{\omega L - \frac{1}{\omega C}}{R} \\ \rule{0pt}{30pt}
 	& I_0 = \frac{\mathcal{E}_0}{\sqrt{R^2 + \left(\omega L - \frac{1}{\omega C}\right)^2}}
@@ -1709,7 +1763,9 @@ Applicando la $fem$ $\mathcal{E} = \mathcal{E}_0 \cos(\omega t + \varphi)$ si ha
 
 \subsubsection{Condizione di Risonanza}
 %IMMAGINE PAGINA 32 SETTIMANA 10%
-
+\begin{center}
+	\includegraphics[width = 15cm]{images/resonance}
+\end{center}
 La corrente nel circuito RLC \`e massima quando la pulsazione della $fem$ applicata \`e uguale alla pulsazione propria del circuito; in tali condizioni lo sfasamento tra corrente e $fem$ \`e nullo. Il fenomeno \`e detto $risonanza$: esso diventa sempre pi\`u accentuato al diminuire della resistenza del circuito.
 
 In condizione di risonanza 
@@ -1738,7 +1794,10 @@ Un circuito RLC con un alto fattore di merito \`e molto selettivo nella risposta
 \subsection{Esempio: Cavo Coassiale}
 
 %IMMAGINE PAGINA 34 SETTIMANA 10%
-
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left
+    \centering
+    \includegraphics[width=0.39\textwidth]{images/coaxsial_cable} % Replace with your image
+\end{wrapfigure}
 Una cavo coassiale \`e una linea di trasmissione per la propagazione di impulsi elettrici. Possiamo vederlo come due conduttori cilindrici con raggio $R_{ext} > R_{int}$, con basi concentriche, attraversati da una corrente eguale e contraria su entrambe le armature. Il cilindro pi\`u esterno \`e posto a massa.
 
 Un cavo ideale (R = 0 ) ha una capacitanza tra conduttore centrale ed esterno e un autoinduttanza attraverso la sezione assiale. Per un cavo lungo ($l \gg c \tau$), l'approssimazione quasi-statica non va bene.
@@ -1749,7 +1808,9 @@ Possiamo rappresentare il cavo come una successione indefinita di circuiti RLC, 
 Una catena di circuiti RLC \`e equivalente a un sistema meccanico con un numero infinito di molle. Per analogia ci aspettiamo che la corrente si propaghi nel cavo come un'onda.
 
 %IMMAGINE PAGINA 35 SETTIMANA 10%
-
+\begin{center}
+	\includegraphics[width = 11 cm]{images/current}
+\end{center}
 Su ogni elemento finito si ha che tensione V = V(x,t) e corrente I = I(x,t), nell'approssimazione infinitesima per una porzione di cavo di lunghezza $dx$ la caduta di tensione sull'induttanza $Ldx$ \`e 
 \begin{equation*}
 	dV = (L_x dx) \frac{dI}{dt}
